@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+<record id="hide_crm_quick_create_view" model="ir.ui.view">
+    <field name="name">crm.lead.kanban.inherit.full.form</field>
+    <field name="model">crm.lead</field>
+    <field name="inherit_id" ref="crm.crm_case_kanban_view_leads"/>
+    <field name="arch" type="xml">
+        <xpath expr="//kanban" position="attributes">
+            <attribute name="quick_create">false</attribute>
+            <attribute name="create">true</attribute>
+        </xpath>
+    </field>
+</record>
+</odoo>
