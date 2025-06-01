@@ -1,0 +1,1 @@
+from . import hitech_afaf_project

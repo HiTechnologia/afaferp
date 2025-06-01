@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_hitech_afaf_project_inherit" model="ir.ui.view">
+        <field name="name">view_hitech_afaf_project_inherit.project_code</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@name='alias_def']" position="before">
+                <group>
+                    <group>
+                        <field name="ht_project_code" placeholder="Add Here">Project Code</field>
+                        <field name="ht_project_plot" placeholder="Add Here"/>
+                        <field name="ht_project_detail" placeholder="Add Here"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_hitech_afaf_project" model="ir.ui.view">
+        <field name="name">project.project.form.ht.afaf</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        <field name="arch" type="xml">
+
+            <!-- Add after the user_id field -->
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="ht_project_code" placeholder="Add Here">Project Code</field>
+                <field name="ht_project_plot" placeholder="Add Here"/>
+                <field name="ht_project_detail" placeholder="Add Here"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
