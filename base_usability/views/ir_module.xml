@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+
+<record id="view_module_filter" model="ir.ui.view">
+    <field name="model">ir.module.module</field>
+    <field name="inherit_id" ref="base.view_module_filter"/>
+    <field name="arch" type="xml">
+        <xpath expr="//filter[@name='extra']" position="after">
+            <separator/>
+            <filter name="installable" string="Installable" domain="[('state', '!=', 'uninstallable')]"/>
+        </xpath>
+    </field>
+</record>
+
+<record id="base.open_module_tree" model="ir.actions.act_window">
+    <field name="context">{'search_default_installable': 1}</field>
+</record>
+
+
+</odoo>
