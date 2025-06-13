@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<record id="view_account_move_reversal" model="ir.ui.view">
+    <field name="model">account.move.reversal</field>
+    <field name="inherit_id" ref="account.view_account_move_reversal"/>
+    <field name="arch" type="xml">
+        <field name="residual" position="before">
+            <div
+                class="alert alert-warning"
+                role="alert"
+                invisible="not already_reversed_warning"
+            >
+                You are about to reverse entries that have already been reversed:
+                <field
+                    name="already_reversed_warning"
+                /> 
+            </div>
+        </field>
+    </field>
+</record>
+
+</odoo>

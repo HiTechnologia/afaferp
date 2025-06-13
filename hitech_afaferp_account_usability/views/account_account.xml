@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+
+<record id="view_account_form" model="ir.ui.view">
+    <field name="name">account.account.form</field>
+    <field name="model">account.account</field>
+    <field name="inherit_id" ref="account.view_account_form"/>
+    <field name="arch" type="xml">
+        <field name="deprecated" position="before">
+            <field name="reconcile" invisible="account_type in ('asset_cash', 'liability_credit_card', 'off_balance')" widget="boolean_toggle"/>
+        </field>
+    </field>
+</record>
+
+
+<record id="view_account_search" model="ir.ui.view">
+    <field name="name">account.account.search</field>
+    <field name="model">account.account</field>
+    <field name="inherit_id" ref="account.view_account_search"/>
+    <field name="arch" type="xml">
+        <field name="name" position="after">
+            <field name="code" filter_domain="[('code', '=like', self + '%')]" string="Code"/>
+        </field>
+    </field>
+</record>
+
+
+</odoo>
