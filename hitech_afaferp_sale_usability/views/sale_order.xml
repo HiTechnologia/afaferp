@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+<record id="view_order_form" model="ir.ui.view">
+    <field name="name">usability.sale.order.form</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_order_form"/>
+    <field name="arch" type="xml">
+        <field name="partner_shipping_id" position="attributes">
+            <attribute name="context" operation="update">{"show_address": 1}</attribute>
+        </field>
+        <!-- client_order_ref is an important field, so we should put it in the top like in v8, not in the "Other Info" tab -->
+        <field name="has_active_pricelist" position="before">
+            <field name="client_order_ref" position="move"/>
+        </field>
+        <button id="send_by_email_primary" position="after">
+            <button name="%(sale.action_report_saleorder)d" type="action" string="Print" invisible="state == 'cancel'"/>
+        </button>
+        <xpath expr="//field[@name='order_line']/list/field[@name='product_template_id']" position="after">
+            <field name="product_barcode" optional="hide"/>
+        </xpath>
+        <button id="send_proforma_primary" position="before">
+            <button name="action_quotation_send" type="object" string="Send Order Acknowledgement" invisible="state != 'sale' or invoice_count &gt;= 1" id="send_order_ack_by_email"/>
+        </button>
+        <xpath expr="//field[@name='order_line']/list/field[@name='product_uom_qty']" position="attributes">
+            <attribute name="sum">1</attribute>
+        </xpath>
+        <xpath expr="//field[@name='order_line']/list/field[@name='qty_delivered']" position="attributes">
+            <attribute name="sum">1</attribute>
+        </xpath>
+        <xpath expr="//field[@name='order_line']/list/field[@name='qty_invoiced']" position="attributes">
+            <attribute name="sum">1</attribute>
+        </xpath>
+    </field>
+</record>
+
+<record id="sale_order_tree" model="ir.ui.view">
+    <field name="name">usability.sale.order.tree</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.sale_order_tree"/>
+    <field name="arch" type="xml">
+        <field name="amount_untaxed" position="attributes">
+            <attribute name="optional">show</attribute>
+        </field>
+        <field name="partner_id" position="after">
+            <field name="client_order_ref" optional="show"/>
+        </field>
+    </field>
+</record>
+
+
+<record id="view_sales_order_filter" model="ir.ui.view">
+    <field name="name">usability.sale.order.search</field>
+    <field name="model">sale.order</field>
+    <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+    <field name="arch" type="xml">
+        <filter name="order_month" position="after">
+            <filter string="State" name="state_groupby" context="{'group_by': 'state'}"/>
+        </filter>
+        <filter name="activities_upcoming_all" position="after">
+            <separator/>
+            <filter name="no_attachment" string="Missing Attachment" domain="[('has_attachment', '=', False)]"/>
+        </filter>
+    </field>
+</record>
+
+<!-- Restore the behavior of Odoo v8:
+https://github.com/odoo/odoo/commit/c1e5ab9b1331c3cb7dc2232bf78952bdb40ad939 -->
+<record id="sale.action_quotations" model="ir.actions.act_window">
+    <field name="domain">[('state', 'in', ('draft', 'sent', 'cancel'))]</field>
+</record>
+
+<record id="sale.action_quotations_with_onboarding" model="ir.actions.act_window">
+    <field name="domain">[('state', 'in', ('draft', 'sent', 'cancel'))]</field>
+</record>
+
+<record id="view_sales_order_line_filter" model="ir.ui.view">
+    <field name="name">usability.sale.order.line.search</field>
+    <field name="model">sale.order.line</field>
+    <field name="inherit_id" ref="sale.view_sales_order_line_filter"/>
+    <field name="arch" type="xml">
+        <filter name="product" position="before">
+            <filter string="Customer" name="partner_groupby" context="{'group_by': 'order_partner_id'}"/>
+        </filter>
+    </field>
+</record>
+
+<record id="view_order_line_tree" model="ir.ui.view">
+    <field name="name">usability.sale.order.line.tree</field>
+    <field name="model">sale.order.line</field>
+    <field name="inherit_id" ref="sale.view_order_line_tree"/>
+    <field name="arch" type="xml">
+        <field name="product_uom_qty" position="attributes">
+            <attribute name="sum">1</attribute>
+        </field>
+        <field name="qty_delivered" position="attributes">
+            <attribute name="sum">1</attribute>
+        </field>
+        <field name="qty_invoiced" position="attributes">
+            <attribute name="sum">1</attribute>
+        </field>
+        <field name="qty_to_invoice" position="attributes">
+            <attribute name="sum">1</attribute>
+        </field>
+    </field>
+</record>
+
+</odoo>

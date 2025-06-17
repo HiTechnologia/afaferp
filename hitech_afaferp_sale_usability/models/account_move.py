@@ -1,0 +1,48 @@
+from odoo import models
+from collections import OrderedDict
+
+
+class AccountMove(models.Model):
+    _inherit = 'account.move'
+
+    def py3o_lines_layout_groupby_order(self, subtotal=True):
+        # This method is an alternative to the method py3o_lines_layout()
+        # defined above: you just have to change the call in the invoice
+        # ODT template
+        self.ensure_one()
+        res1 = OrderedDict()
+        # {categ(1): {'lines': [l1, l2], 'subtotal': 23.32}}
+        soo = self.env['sale.order']
+        for line in self.invoice_line_ids:
+            order = not line.display_type and line.sale_line_ids and\
+                line.sale_line_ids[0].order_id or soo
+            if order in res1:
+                res1[order]['lines'].append(line)
+                res1[order]['subtotal'] += line.price_subtotal
+            else:
+                res1[order] = {
+                    'lines': [line],
+                    'subtotal': line.price_subtotal}
+        # from pprint import pprint
+        # pprint(res1)
+        res2 = []
+        if len(res1) == 1 and not list(res1)[0]:
+            # No order at all
+            for line in list(res1.values())[0]['lines']:
+                res2.append({'line': line})
+        else:
+            for order, ldict in res1.items():
+                res2.append({'categ': order})
+                for line in ldict['lines']:
+                    res2.append({'line': line})
+                if subtotal:
+                    res2.append({'subtotal': ldict['subtotal']})
+        # res2:
+        # [
+        #    {'categ': categ(1)},
+        #    {'line': invoice_line(2)},
+        #    {'line': invoice_line(3)},
+        #    {'subtotal': 8932.23},
+        # ]
+        # pprint(res2)
+        return res2
