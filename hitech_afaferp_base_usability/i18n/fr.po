@@ -1,0 +1,216 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_usability
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-07-04 13:47+0000\n"
+"PO-Revision-Date: 2024-07-04 13:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_company.py:0
+#, python-format
+msgid "%s with a capital of"
+msgstr "%s au capital de"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_company.py:0
+#, python-format
+msgid "APE:"
+msgstr "APE :"
+
+#. module: base_usability
+#: model:ir.model,name:base_usability.model_res_partner_bank
+msgid "Bank Accounts"
+msgstr "Comptes bancaires"
+
+#. module: base_usability
+#: model:ir.model.fields,field_description:base_usability.field_res_partner_bank__bank_name
+msgid "Bank Name"
+msgstr "Nom de la banque"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_company.py:0
+#, python-format
+msgid "Capital:"
+msgstr "Capital :"
+
+#. module: base_usability
+#: model:ir.model,name:base_usability.model_res_company
+msgid "Companies"
+msgstr "Sociétés"
+
+#. module: base_usability
+#: model_terms:ir.ui.view,arch_db:base_usability.ir_property_view_search
+msgid "Company"
+msgstr "Société"
+
+#. module: base_usability
+#: model:ir.model,name:base_usability.model_res_partner
+msgid "Contact"
+msgstr ""
+
+#. module: base_usability
+#: model_terms:ir.ui.view,arch_db:base_usability.res_country_search
+msgid "Currency"
+msgstr "Devise"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_partner.py:0
+#: code:addons/base_usability/models/res_partner.py:0
+#, python-format
+msgid "Customer Number:"
+msgstr "N° client :"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_company.py:0
+#: code:addons/base_usability/models/res_partner.py:0
+#, python-format
+msgid "E-mail:"
+msgstr "E-mail :"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_company.py:0
+#, python-format
+msgid "EORI:"
+msgstr "EORI :"
+
+#. module: base_usability
+#: model_terms:ir.ui.view,arch_db:base_usability.ir_property_view_search
+msgid "Field"
+msgstr "Champ"
+
+#. module: base_usability
+#: model:ir.model,name:base_usability.model_ir_model_fields
+msgid "Fields"
+msgstr "Champs"
+
+#. module: base_usability
+#: model_terms:ir.ui.view,arch_db:base_usability.res_country_search
+msgid "Group By"
+msgstr "Grouper par"
+
+#. module: base_usability
+#: model_terms:ir.ui.view,arch_db:base_usability.view_res_partner_filter
+msgid "Industry"
+msgstr "Industrie"
+
+#. module: base_usability
+#: model_terms:ir.ui.view,arch_db:base_usability.view_module_filter
+msgid "Installable"
+msgstr "Installable"
+
+#. module: base_usability
+#: model:ir.model,name:base_usability.model_ir_mail_server
+msgid "Mail Server"
+msgstr "Serveur de messagerie"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_partner.py:0
+#, python-format
+msgid "Mobile:"
+msgstr "Portable :"
+
+#. module: base_usability
+#: model:ir.model,name:base_usability.model_ir_model
+msgid "Models"
+msgstr "Modèles"
+
+#. module: base_usability
+#: model_terms:ir.ui.view,arch_db:base_usability.res_country_search
+msgid "Name or Code"
+msgstr "Nom ou code"
+
+#. module: base_usability
+#: model_terms:ir.ui.view,arch_db:base_usability.view_res_partner_filter
+msgid "Name or Email or VAT or Reference"
+msgstr "Nom ou e-mail ou n°TVA ou référence"
+
+#. module: base_usability
+#: model:ir.model.fields,field_description:base_usability.field_res_partner__name_title
+#: model:ir.model.fields,field_description:base_usability.field_res_users__name_title
+msgid "Name with Title"
+msgstr "Nom avec titre"
+
+#. module: base_usability
+#: model:res.groups,name:base_usability.group_nobody
+msgid "Nobody (used to hide native menus)"
+msgstr "Personne (utilisé pour cacher des entrées de menu natifs)"
+
+#. module: base_usability
+#: model:ir.model.fields,field_description:base_usability.field_res_partner__ref
+#: model:ir.model.fields,field_description:base_usability.field_res_users__ref
+msgid "Reference"
+msgstr "Référence"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_company.py:0
+#, python-format
+msgid "SIREN:"
+msgstr "SIREN :"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_company.py:0
+#, python-format
+msgid "SIRET:"
+msgstr "SIRET :"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_partner.py:0
+#: code:addons/base_usability/models/res_partner.py:0
+#, python-format
+msgid "Supplier Number:"
+msgstr "N° fournisseur :"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_company.py:0
+#: code:addons/base_usability/models/res_partner.py:0
+#, python-format
+msgid "Tel:"
+msgstr "Tél :"
+
+#. module: base_usability
+#: model:ir.model,name:base_usability.model_res_users
+msgid "User"
+msgstr "Utilisateur"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_partner.py:0
+#, python-format
+msgid "VAT Number:"
+msgstr "N° TVA :"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_company.py:0
+#, python-format
+msgid "VAT:"
+msgstr "TVA :"
+
+#. module: base_usability
+#. odoo-python
+#: code:addons/base_usability/models/res_company.py:0
+#: code:addons/base_usability/models/res_partner.py:0
+#, python-format
+msgid "Website:"
+msgstr "Site web :"
