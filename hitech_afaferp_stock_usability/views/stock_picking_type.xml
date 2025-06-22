@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+
+<record id="view_picking_type_form" model="ir.ui.view">
+    <field name="model">stock.picking.type</field>
+    <field name="inherit_id" ref="stock.view_picking_type_form" />
+    <field name="arch" type="xml">
+        <field name="return_picking_type_id" position="before">
+            <field name="is_dropship"/>
+        </field>
+    </field>
+</record>
+
+
+<record id="view_picking_type_tree" model="ir.ui.view">
+    <field name="name">usability.stock.picking.type.tree</field>
+    <field name="model">stock.picking.type</field>
+    <field name="inherit_id" ref="stock.view_picking_type_tree"/>
+    <field name="arch" type="xml">
+        <field name="warehouse_id" position="after">
+            <field name="default_location_src_id" optional="show"/>
+            <field name="default_location_dest_id" optional="show"/>
+            <field name="return_picking_type_id" optional="hide"/>
+        </field>
+        <field name="sequence_id" position="attributes">
+            <attribute name="optional">show</attribute>
+        </field>
+    </field>
+</record>
+
+</odoo>

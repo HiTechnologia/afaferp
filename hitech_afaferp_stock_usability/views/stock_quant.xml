@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+
+
+<record id="view_stock_quant_tree_simple" model="ir.ui.view">
+    <field name="name">stock.usability.quant.tree</field>
+    <field name="model">stock.quant</field>
+    <field name="inherit_id" ref="stock.view_stock_quant_tree_simple"/>
+    <field name="arch" type="xml">
+        <field name="product_id" position="after">
+            <field name="product_barcode" optional="hide"/>
+        </field>
+        <field name="quantity" position="after">
+            <field name="reserved_quantity" sum="1" optional="show"/>
+        </field>
+        <field name="quantity" position="attributes">
+            <attribute name="sum">1</attribute>
+        </field>
+        <field name="available_quantity" position="attributes">
+            <attribute name="sum">1</attribute>
+            <attribute name="optional">show</attribute>
+        </field>
+    </field>
+</record>
+
+<!-- view used from product form -->
+<record id="view_stock_quant_tree_editable" model="ir.ui.view">
+    <field name="model">stock.quant</field>
+    <field name="inherit_id" ref="stock.view_stock_quant_tree_editable"/>
+    <field name="arch" type="xml">
+        <button name="action_view_stock_moves" position="before">
+            <button type="object" name="action_stock_move_lines_reserved" string="Reservations" invisible="reserved_quantity == 0"/>
+    </button>
+    <!--
+        <field name="quantity" position="attributes">
+            <attribute name="sum">1</attribute>
+    </field> -->
+        <field name="available_quantity" position="attributes">
+            <attribute name="optional">show</attribute>
+        </field>
+    </field>
+</record>
+
+<record id="quant_search_view" model="ir.ui.view">
+    <field name="model">stock.quant</field>
+    <field name="inherit_id" ref="stock.quant_search_view"/>
+    <field name="arch" type="xml">
+        <!-- With the context set via the field location_id
+            odoo will set default_location_id to [self]
+            So, to make it work, we also inherit default_get
+            to convert from list of 1 ID to an ID -->
+        <field name="location_id" position="attributes">
+            <attribute name="context">{'search_location': self}</attribute>
+        </field>
+    </field>
+</record>
+
+<!--  mig to v16 ?
+<record id="view_stock_quant_form" model="ir.ui.view">
+    <field name="name">stock.usability.quant.form</field>
+    <field name="model">stock.quant</field>
+    <field name="inherit_id" ref="stock.view_stock_quant_form"/>
+    <field name="arch" type="xml">
+        <div name="button_box" position="inside">
+            <button class="oe_stat_button" icon="fa-arrows-v" type="object" name="action_stock_move_lines_reserved" string="Reservations"/>
+        </div>
+        <xpath expr="//field[@name='reserved_quantity']/.." position="after">
+            <label for="available_quantity" />
+            <div class="o_row">
+                <field name="available_quantity"/>
+                <field name="product_uom_id" groups="uom.group_uom"/>
+            </div>
+        </xpath>
+    </field>
+</record>
+-->
+
+</odoo>

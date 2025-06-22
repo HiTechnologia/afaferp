@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+
+<record id="procurement_scheduler_log_tree" model="ir.ui.view">
+    <field name="name">procurement_scheduler_log_tree</field>
+    <field name="model">procurement.scheduler.log</field>
+    <field name="arch" type="xml">
+        <list>
+            <field name="start_datetime"/>
+            <field name="create_date" string="Scheduler End Time"/>
+            <field name="create_uid" string="Scheduler Executed by"/>
+            <field name="company_id" groups="base.group_multi_company"/>
+            <field name="company_id" column_invisible="1"/>
+        </list>
+    </field>
+</record>
+
+<record id="procurement_scheduler_log_search" model="ir.ui.view">
+    <field name="model">procurement.scheduler.log</field>
+    <field name="arch" type="xml">
+        <search>
+            <field name="create_uid"/>
+            <separator/>
+            <filter string="Start Date" name="start_datetime" date="start_datetime"/>
+            <group name="groupby">
+                <filter name="start_datetime_groupby" string="Start Date" context="{'group_by': 'start_datetime'}"/>
+                <filter name="create_uid_groupby" string="Executed by" context="{'group_by': 'create_uid'}"/>
+            </group>
+        </search>
+    </field>
+</record>
+
+<record id="procurement_scheduler_log_action" model="ir.actions.act_window">
+    <field name="name">Scheduler Logs</field>
+    <field name="res_model">procurement.scheduler.log</field>
+    <field name="view_mode">list</field>
+</record>
+
+<menuitem id="procurement_scheduler_log_menu"
+    action="procurement_scheduler_log_action"
+    parent="stock.menu_warehouse_report" sequence="300"/>
+
+</odoo>
