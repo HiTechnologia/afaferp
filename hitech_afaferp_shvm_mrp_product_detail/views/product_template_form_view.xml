@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="mrp_order_product_form_view" model="ir.ui.view">
+        <field name="name">mrp.order.product.form.view</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook[1]" position="inside">
+                <page string="MRP Order Details">
+                    <field name="production_ids" readonly="1" domain="[('product_tmpl_id', '=', id)]"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
