@@ -1,0 +1,3319 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* plm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-06-13 04:31+0000\n"
+"PO-Revision-Date: 2025-06-13 04:31+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_template.py:0
+msgid "\t Engineering Code = %r   Engineering Revision = %r   Product Id = %r\n"
+msgstr "\t Инженерный кодекс = %r   Техническая ревизия = %r   Идентификатор продукта = %r\n"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_report_ir_attachment_file__nbr
+msgid "# of Files"
+msgstr "# файлов"
+
+#. module: plm
+#: model:ir.actions.report,print_report_name:plm.action_report_doc_structure
+msgid "'Bom Doc Structure - %s' % object.display_name"
+msgstr "'Структура документа Бом - %s' % object.display_name"
+
+#. module: plm
+#: model:ir.actions.report,print_report_name:plm.action_report_prod_structure
+msgid "'Bom prod Structure - %s' % object.display_name"
+msgstr "'Структура продукта продукта - %s' % object.display_name"
+
+#. module: plm
+#: model:ir.actions.report,print_report_name:plm.action_report_attachment_change_impact
+msgid "'attachment : %s change impact report' % (object.display_name)"
+msgstr "'вложение : %s отчет о влиянии изменений' % (object.display_name)"
+
+#. module: plm
+#: model:ir.actions.report,print_report_name:plm.action_report_product_change_impact
+msgid "'product : %s Change Impact' % (object.display_name)"
+msgstr "'продукт : %s Изменение воздействия' % (object.display_name)"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
+msgid "- Rev_"
+msgstr "- Рев_"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: model:ir.model.fields.selection,name:plm.selection__ir_attachment__document_type__2d
+msgid "2D"
+msgstr ""
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: model:ir.model.fields.selection,name:plm.selection__ir_attachment__document_type__3d
+msgid "3D"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
+msgid "<b>Crate Date:</b>"
+msgstr "<b>Дата создания:</b>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
+msgid "<b>Create User:</b>"
+msgstr "<b>Создать пользователя:</b>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
+msgid "<b>Document Information</b>"
+msgstr "<b>Информация о документе</b>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
+msgid "<b>Last Write Date:</b>"
+msgstr "<b>Дата последней записи:</b>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
+msgid "<b>Last Write User:</b>"
+msgstr "<b>Последний пишущий пользователь:</b>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
+msgid "<b>State:</b>"
+msgstr "<b>Состояние:</b>"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/mrp_bom.py:0
+msgid ""
+"<p class=\"o_view_nocontent_smiling_face\">\n"
+"                        Upload files to your product\n"
+"                    </p><p>\n"
+"                        Use this feature to store any files, like drawings or specifications.\n"
+"                    </p>"
+msgstr ""
+"<p class=\"o_view_nocontent_smiling_face\">\n"
+"                        Загрузите файлы в ваш продукт\n"
+"                    </p><p>\n"
+"                        Используйте эту функцию для хранения любых файлов, таких как чертежи или спецификации..\n"
+"                    </p>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "<span style=\"color:orange\">Not.Update</span>"
+msgstr "<span style=\"color:orange\">Нет.Обновить</span>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 100px;\">\n"
+"                                                                        ↳\n"
+"                                                                    </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 100px;\">\n"
+"                                                                    ↳\n"
+"                                                                </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 120px;\">\n"
+"                                                                            ↳\n"
+"                                                                        </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 120px;\">\n"
+"                                                                        ↳\n"
+"                                                                    </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 140px;\">\n"
+"                                                                                                ↳\n"
+"                                                                                            </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 140px;\">\n"
+"                                                                                ↳\n"
+"                                                                            </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 140px;\">\n"
+"                                                                            ↳\n"
+"                                                                        </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 160px;\">\n"
+"                                                                                ↳\n"
+"                                                                            </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 180px;\">\n"
+"                                                                                    ↳\n"
+"                                                                                </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 200px;\">\n"
+"                                                                                        ↳\n"
+"                                                                                    </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 20px;\">\n"
+"                                                        ↳\n"
+"                                                    </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 20px;\">\n"
+"                                                    ↳\n"
+"                                                </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 220px;\">\n"
+"                                                                                            ↳\n"
+"                                                                                        </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 40px;\">\n"
+"                                                            ↳\n"
+"                                                        </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 40px;\">\n"
+"                                                        ↳\n"
+"                                                    </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 60px;\">\n"
+"                                                                ↳\n"
+"                                                            </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 60px;\">\n"
+"                                                            ↳\n"
+"                                                        </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 80px;\">\n"
+"                                                                    ↳\n"
+"                                                                </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92); padding-left: 80px;\">\n"
+"                                                                ↳\n"
+"                                                            </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+msgid ""
+"<span style=\"font-size:20px; color:rgb(1 88 92);\">\n"
+"                                                    ↳\n"
+"                                                </span>"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span>\n"
+"                                    <strong>Affected Attachments</strong>\n"
+"                                </span>"
+msgstr ""
+"<span>\n"
+"                                    <strong>Затронутые вложения</strong>\n"
+"                                </span>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid ""
+"<span>\n"
+"                                    <strong>Affected Parent Products</strong>\n"
+"                                </span>"
+msgstr ""
+"<span>\n"
+"                                    <strong>Затронутые родительские продукты</strong>\n"
+"                                </span>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+msgid ""
+"<span>\n"
+"                                    <strong>Attachment Affected Product Report</strong>\n"
+"                                </span>"
+msgstr ""
+"<span>\n"
+"                                    <strong>Отчет о продукте, затронутом вложением</strong>\n"
+"                                </span>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "<span>Check-In</span>"
+msgstr "<span>Заезд</span>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "<span>Check-Out</span>"
+msgstr "<span>Проверять, выписываться</span>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid "<span>No affected attachments found at the moment.</span>"
+msgstr "<span>На данный момент не обнаружено затронутых вложений..</span>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid "<span>No affected products and attachments found at the moment.</span>"
+msgstr "<span>На данный момент не обнаружено затронутых продуктов и приложений..</span>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid "<span>No affected products found at the moment.</span>"
+msgstr "<span>На данный момент не обнаружено затронутых продуктов..</span>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_document_relation_kanban_view
+msgid ""
+"<strong invisible=\"child_type !='other'\">Other</strong>\n"
+"                        \t\t\t\t<strong invisible=\"child_type !='2d'\">2D</strong>\n"
+"                        \t\t\t\t<strong invisible=\"child_type !='3d'\">3D</strong>"
+msgstr ""
+"<strong invisible=\"child_type !='other'\">Другой</strong>\n"
+"                        \t\t\t\t<strong invisible=\"child_type !='2d'\">2D</strong>\n"
+"                        \t\t\t\t<strong invisible=\"child_type !='3d'\">3D</strong>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_kanban_view
+msgid ""
+"<strong invisible=\"document_type!='other'\">Other</strong>\n"
+"                                        <strong invisible=\"document_type!='2d'\">2D</strong>\n"
+"                                        <strong invisible=\"document_type!='3d'\">3D</strong>\n"
+"                                        <strong invisible=\"document_type!='pr'\">PR</strong>"
+msgstr ""
+"<strong invisible=\"document_type!='other'\">Другой</strong>\n"
+"                                        <strong invisible=\"document_type!='2d'\">2D</strong>\n"
+"                                        <strong invisible=\"document_type!='3d'\">3D</strong>\n"
+"                                        <strong invisible=\"document_type!='pr'\">PR</strong>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_document_relation_kanban_view
+msgid ""
+"<strong invisible=\"parent_type != 'other'\">Other</strong>\n"
+"                        \t\t\t\t<strong invisible=\"parent_type != '2d'\">2D</strong>\n"
+"                        \t\t\t\t<strong invisible=\"parent_type != '3d'\">3D</strong>"
+msgstr ""
+"<strong invisible=\"parent_type != 'other'\">Другой</strong>\n"
+"                        \t\t\t\t<strong invisible=\"parent_type != '2d'\">2D</strong>\n"
+"                        \t\t\t\t<strong invisible=\"parent_type != '3d'\">3D</strong>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_document_relation_kanban_view
+msgid "<strong>Child</strong>"
+msgstr "<strong>Ребенок</strong>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.report_prod_bom
+msgid "<strong>Missing product structure</strong>"
+msgstr "<strong>Отсутствует структура продукта</strong>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_document_relation_kanban_view
+#: model_terms:ir.ui.view,arch_db:plm.document_kanban_view
+msgid "<strong>Name:</strong>"
+msgstr "<strong>Имя:</strong>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_document_relation_kanban_view
+msgid "<strong>Parent</strong>"
+msgstr "<strong>Родитель</strong>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_document_relation_kanban_view
+#: model_terms:ir.ui.view,arch_db:plm.document_kanban_view
+msgid "<strong>Revision:</strong>"
+msgstr "<strong>Изменение:</strong>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_document_relation_kanban_view
+#: model_terms:ir.ui.view,arch_db:plm.document_kanban_view
+msgid "<strong>State:</strong>"
+msgstr "<strong>Состояние:</strong>"
+
+#. module: plm
+#: model:ir.model,name:plm.model_res_groups
+msgid "Access Groups"
+msgstr "Группы доступа"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__message_needaction
+#: model:ir.model.fields,field_description:plm.field_product_template__message_needaction
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__message_needaction
+msgid "Action Needed"
+msgstr "Необходимы действия"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_action_plm_dbthread_list
+msgid "Actions"
+msgstr "Действия"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_client_customprocedure
+msgid "Activate the PLM Client mapping"
+msgstr "Активируйте сопоставление клиента PLM"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_project
+msgid "Activate the PLM Project connection"
+msgstr "Активируйте соединение проекта PLM"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_automated_convertion
+msgid "Activate the server conversion tool"
+msgstr "Активируйте инструмент преобразования сервера"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__activity_ids
+#: model:ir.model.fields,field_description:plm.field_product_template__activity_ids
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__activity_ids
+msgid "Activities"
+msgstr "Активность"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__activity_exception_decoration
+#: model:ir.model.fields,field_description:plm.field_product_template__activity_exception_decoration
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Оформление исключения активности"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__activity_state
+#: model:ir.model.fields,field_description:plm.field_product_template__activity_state
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__activity_state
+msgid "Activity State"
+msgstr "Состояние активности"
+
+#. module: plm
+#: model:ir.model,name:plm.model_mail_activity_type
+msgid "Activity Type"
+msgstr "Тип активности"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__activity_type_icon
+#: model:ir.model.fields,field_description:plm.field_product_template__activity_type_icon
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Значок типа активности"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid ""
+"Add a progress bar to check the progress of the project based on the status "
+"of the products"
+msgstr ""
+"Добавьте индикатор выполнения, чтобы проверять ход проекта в зависимости от "
+"статуса продуктов"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_sale_fix
+msgid "Add plm groups permission to sale"
+msgstr "Добавить разрешение PLM Group на продажу"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid ""
+"Add the capability to update the manufacturing order from a revised BOM\n"
+"                                        <b>\n"
+"                                        ATTENTION !! This module depends on plm_mrp_bom_update from:\n"
+"                                        git clone -b 16.0 https://github.com/OmniaSolutions/odooAddons.git</b>"
+msgstr ""
+"Добавить возможность обновления производственного заказа из пересмотренной спецификации\n"
+"                                        <b>\n"
+"                                        ВНИМАНИЕ!! Этот модуль зависит от plm_mrp_bom_update из:\n"
+"                                        git clone -b 16.0 https://github.com/OmniaSolutions/odooAddons.git</b>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid ""
+"Add the capability to use the PDF PLM document inside work order\n"
+"                                        ATTENTION !! This module work only for enterprise version because the mrp_workorder is in the enterprise version"
+msgstr ""
+"Добавьте возможность использовать документ PDF PLM в рабочем задании.\n"
+"                                         ВНИМАНИЕ !! Этот модуль работает только для корпоративной версии, потому что mrp_workorder находится в корпоративной версии"
+
+#. module: plm
+#: model:res.groups,name:plm.group_plm_admin
+msgid "Administrator"
+msgstr "Администратор"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Advanced linking and organise your document with virtual box"
+msgstr ""
+"Расширенное связывание и организация вашего документа с помощью виртуальной "
+"коробки"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid ""
+"Advanced way to save and synchronise PLM document to improve open and save operation for pour connection bandwidth\n"
+"                                    To make it work you need to install a file server application   \"mirror_document_server\""
+msgstr ""
+"Расширенный способ сохранения и синхронизации документов PLM для улучшения операций открытия и сохранения для увеличения пропускной способности соединения\n"
+"                                    Чтобы это заработало, вам нужно установить приложение файлового сервера.   \"mirror_document_server\""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid ""
+"Allow converting files in different format.\n"
+"                                    In order to make it run you will need the conversion server provided by OmniaSolutions."
+msgstr ""
+"Разрешить конвертацию файлов в другой формат.\n"
+"                                    Для его запуска вам понадобится сервер конвертации, предоставленный OmniaSolutions."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_automate_normal_bom
+msgid "Allow to create normal BOM if not exists and product are released."
+msgstr ""
+"Разрешить создание нормального BOM, если он не существует, и продукт "
+"выпущен."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_descriptions.py:0
+#: model:ir.model.fields,help:plm.field_plm_description__fmtend
+msgid ""
+"Allow to represent a normalized composition of technical features : %s%s "
+"allows to build chained values."
+msgstr ""
+"Разрешить представлять нормализованную композицию технических характеристик:"
+" %s%s позволяет строить цепочки значений."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_descriptions.py:0
+#: model:ir.model.fields,help:plm.field_plm_description__fmt1
+#: model:ir.model.fields,help:plm.field_plm_description__fmt2
+#: model:ir.model.fields,help:plm.field_plm_description__fmt3
+msgid ""
+"Allow to represent the measure: %s%s allow to build um and value, %s builds "
+"only value, none builds only value."
+msgstr ""
+"Разрешить представлять меру: %s%s позволяет строить um и значение, %s строит"
+" только значение, none строит только значение."
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid ""
+"Allow to select only product that have engineering_code and is in the latest"
+" revision for Manufacturing"
+msgstr ""
+"Разрешить выбирать только продукт, который имеет код инженерным_кодом и "
+"находится в последней версии для производства"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid ""
+"Allow to select only product that have engineering_code and is in the latest"
+" revision for Purchase"
+msgstr ""
+"Разрешить выбирать для покупки только продукт с инженерным_кодом и последней"
+" версией"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid ""
+"Allow to select only product that have not engineering_code or is in the "
+"latest revision for Purchase"
+msgstr ""
+"Разрешить выбирать только продукт, который не имеет инженерным_кодом или "
+"имеет последнюю версию для покупки"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,help:plm.field_product_product__std_umc3
+msgid "Allow to specifiy a unit measure for the third feature."
+msgstr "Разрешить указать единицу измерения для третьего объекта."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,help:plm.field_product_product__std_umc1
+msgid "Allow to specify a unit measure for the first feature."
+msgstr "Разрешить указать единицу измерения для первого объекта."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,help:plm.field_product_product__std_umc2
+msgid "Allow to specify a unit measure for the second feature."
+msgstr "Разрешить указать единицу измерения для второго объекта."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_descriptions.py:0
+#: model:ir.model.fields,help:plm.field_plm_description__umc1
+#: model:ir.model.fields,help:plm.field_plm_description__umc2
+#: model:ir.model.fields,help:plm.field_plm_description__umc3
+msgid "Allow to specify a unit measure or a label for the feature."
+msgstr "Позволяет указать единицу измерения или метку для функции."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_engineering
+msgid "Allow to use engineering BOM"
+msgstr "Разрешить использовать инженерную спецификацию"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid ""
+"Allows view and/or update obsoleted components in a Normal Bill Of Materials"
+" using released components."
+msgstr ""
+"Позволяет просматривать и/или обновлять устаревшие компоненты в обычной "
+"спецификации с использованием выпущенных компонентов."
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_create_normal_bom
+msgid "Are you sure you want to create a new Normal Bom?"
+msgstr "Вы уверены, что хотите создать новый Normal Bpm?"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_descriptions.py:0
+#: model:ir.model.fields,help:plm.field_plm_description__sequence
+msgid ""
+"Assign the sequence order when displaying a list of product categories."
+msgstr ""
+"Назначьте порядок следования при отображении списка категорий товаров."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,help:plm.field_product_product__std_value1
+msgid "Assign value to the first characteristic."
+msgstr "Присвойте значение первой характеристике."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,help:plm.field_product_product__std_value2
+#: model:ir.model.fields,help:plm.field_product_product__std_value3
+msgid "Assign value to the second characteristic."
+msgstr "Присвойте значение второй характеристике."
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_mrp_bom__att_count
+msgid "Att Count"
+msgstr "Количество просмотров"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Attachment"
+msgstr "Вложение"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.action_report_attachment_change_impact
+msgid "Attachment Change Impact"
+msgstr "Влияние изменения вложения"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__message_attachment_count
+#: model:ir.model.fields,field_description:plm.field_product_template__message_attachment_count
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__message_attachment_count
+msgid "Attachment Count"
+msgstr "Счетчик прикрепленных файлов"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__attachment_revision_count
+#: model:ir.model.fields,field_description:plm.field_product_document__attachment_revision_count
+msgid "Attachment Revision Count"
+msgstr "Счетчик изменений вложений"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/mrp_bom.py:0
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_client_workflow
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Attachments"
+msgstr "Bложений"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Attachments To"
+msgstr "Вложения к"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Automate the creation of normal B.O.M. with scheduled action"
+msgstr "Автоматизируйте создание обычных спецификаций материалов с помощью запланированных действий"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_automatic_weight
+msgid "Automatic weight calculation"
+msgstr "Автоматический расчет веса"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_workflow_custom_action
+msgid "Automatic workFlow actions"
+msgstr ""
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/mrp_bom.py:0
+msgid "B.O.M. Lines"
+msgstr "Линии спецификации"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/mrp_bom.py:0
+msgid "B.O.M.S"
+msgstr ""
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/mrp_bom_line.py:0
+msgid "B.o.M."
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "BOM"
+msgstr "Спецификация"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_plm_bom_structure_all
+msgid "BOM All Levels"
+msgstr "Спецификация всех уровней"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_plm_bom_structure_all_sum
+msgid "BOM All Levels Summarized"
+msgstr "Сводка всех уровней спецификации"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_plm_bom_structure_flat
+msgid "BOM Flat Summarized"
+msgstr "Плоская сводка спецификации"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.bom_structure_all
+msgid "BOM Name"
+msgstr "Наименование спецификации"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_plm_bom_structure_one
+msgid "BOM One Level"
+msgstr "Спецификация один уровень"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_plm_bom_structure_one_sum
+msgid "BOM One Level Summarized"
+msgstr "Сводка по одному уровню спецификации"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_plm_bom_structure_leaves
+msgid "BOM Only Leaves Summarize"
+msgstr "Подведение итогов только результатов спецификации"
+
+#. module: plm
+#: model:ir.model,name:plm.model_report_mrp_report_bom_structure
+msgid "BOM Overview Report"
+msgstr "Обзорный отчет по BOM"
+
+#. module: plm
+#: model:ir.model,name:plm.model_plm_backupdoc_wizard
+msgid "Back up document wizard"
+msgstr "Мастер резервного копирования документов"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.action_plm_backupdoc
+msgid "Backup Data Set"
+msgstr "Резервное копирование набора данных"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__plm_backup_doc_id
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__plm_backup_doc_id
+msgid "Backup Document Reference"
+msgstr "Справочник по резервным копиям документов"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+msgid "Backup Document Set"
+msgstr "Резервный набор документов"
+
+#. module: plm
+#: model:ir.model,name:plm.model_base
+msgid "Base"
+msgstr "База"
+
+#. module: plm
+#: model:ir.model,name:plm.model_mrp_bom
+msgid "Bill of Material"
+msgstr "Ведомость материалов"
+
+#. module: plm
+#: model:ir.model,name:plm.model_mrp_bom_line
+msgid "Bill of Material Line"
+msgstr "Строка Спецификации"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_bom_list_structure
+msgid "Bill of Materials"
+msgstr "Спецификация материалов"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.action2
+msgid "Bill of Materials Structure"
+msgstr "Спецификация материалов Структура"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/mrp_bom.py:0
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,field_description:plm.field_mrp_bom__father_complete_ids
+#: model:ir.model.fields,field_description:plm.field_product_product__father_part_ids
+msgid "BoM Hierarchy"
+msgstr "Иерархия спецификации"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_mrp_bom__type
+#: model:ir.model.fields,field_description:plm.field_mrp_bom_line__type
+msgid "BoM Type"
+msgstr "Тип спецификации"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_all_product_product_pdf
+msgid "Bom All Levels PDF Drawings"
+msgstr "Бом Все уровни PDF чертежи"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_mrp_bom_filter_inherit
+msgid "Bom Name"
+msgstr "Имя Бом"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_one_product_product_pdf
+msgid "Bom One Level PDF Drawings"
+msgstr "Чертежи Бом один уровень в формате PDF"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_plm_temporary_message__name
+msgid "Bom Result"
+msgstr "Бом Результат"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_mrp_bom_line__itemnum
+msgid "CAD Item Position"
+msgstr "Позиция элемента САПР"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_mrp_bom_line__itemlbl
+msgid "CAD Item Position Label"
+msgstr "Метка позиции элемента САПР"
+
+#. module: plm
+#: model:ir.ui.menu,name:plm.menu_cad_open
+msgid "CAD Opens"
+msgstr "САПР открывается"
+
+#. module: plm
+#: model:ir.ui.menu,name:plm.menu_cad_open_bck
+msgid "CAD Opens Bck"
+msgstr "CAD открывает назад"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__cad_name
+#: model:ir.model.fields,field_description:plm.field_product_document__cad_name
+msgid "Cad Name"
+msgstr "Имя CAD"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_material
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_material
+msgid "Cad Raw Material"
+msgstr "Кад Сырье Материал"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_template.py:0
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_surface
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_surface
+msgid "Cad Surface Finishing"
+msgstr "Кад Поверхностная Отделка"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_treatment
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_treatment
+msgid "Cad Thermal Treatment"
+msgstr "Кад Термическая обработка"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_product_product__sale_ok
+#: model:ir.model.fields,field_description:plm.field_product_template__sale_ok
+msgid "Can be Sold"
+msgstr "Можно продавать"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_create_normal_bom
+#: model_terms:ir.ui.view,arch_db:plm.restore_document_button_view
+msgid "Cancel"
+msgstr "Отмена"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form
+msgid "Category"
+msgstr "Категория"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_mail_activity_type__change_activity_type
+msgid "Change Activity Type"
+msgstr "Изменить тип активности"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Changed By Me"
+msgstr "Изменено мной"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Changed by"
+msgstr "Изменено к"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Changed in"
+msgstr "Изменено в"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Changes"
+msgstr "Изменения"
+
+#. module: plm
+#: model:ir.actions.server,name:plm.check_attachment_change_impact
+msgid "Check Attachment Change Impact"
+msgstr "Проверьте влияние изменения вложения"
+
+#. module: plm
+#: model:ir.actions.server,name:plm.check_product_change_impact
+msgid "Check Product Change Impact"
+msgstr "Проверьте влияние изменения продукта"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.action_plm_checkout
+msgid "Check-Out"
+msgstr "Проверять, выписываться"
+
+#. module: plm
+#: model:mail.activity.type,name:plm.mail_activity_check_out_request
+msgid "Check-Out Request"
+msgstr "Запрос на выезд"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
+msgid "CheckIn"
+msgstr "Заезд"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+#: model_terms:ir.ui.view,arch_db:plm.report_doc_bom
+msgid "CheckOut By"
+msgstr "Оформить заказ"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__userid
+msgid "CheckOut User"
+msgstr "Проверять, выписываться Пользователь"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
+msgid "CheckOut by me"
+msgstr "Проверять, выписываться мной"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_search_button
+#: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
+msgid "CheckOutUser:"
+msgstr "ПроверятьвыписыватьсяПользователь:"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_checkout.py:0
+msgid "Checked-In"
+msgstr "Зарегистрирован"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+msgid "Checked-Out Document"
+msgstr "Извлеченный документ"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_checkout.py:0
+msgid "Checked-Out ID %r"
+msgstr "ID выписанного %r"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+msgid "Checked-Out Yesterday"
+msgstr "Проверено-Аут Вчера"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+msgid "Checked-Out in last month"
+msgstr "Проверено-Аут в прошлом месяце"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+msgid "Checked-Out in last week"
+msgstr "Проверено-Аут на прошлой неделе"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+msgid "Checked-Out in latest 7 days"
+msgstr "Проверено-Аут за последние 7 дней"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__checkout_user
+#: model:ir.model.fields,field_description:plm.field_product_document__checkout_user
+msgid "Checked-Out to"
+msgstr "Проверено-Аут к"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+msgid "Checked-Out today"
+msgstr "Проверено-Аут сегодня"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Child"
+msgstr "Ребенок"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Child Confirmed"
+msgstr "Ребенок Подтвержденный"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__child_type
+msgid "Child Document Type"
+msgstr "Tип документа"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__child_linked
+msgid "Child Linked Components"
+msgstr "Ребенок Связанные компоненты"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__preview_related
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__preview_related
+#: model:ir.model.fields,field_description:plm.field_product_document__preview_related
+msgid "Child Parent Preview"
+msgstr "Предварительный просмотр ребенка и родителя"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__child_preview
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_form_view
+msgid "Child Preview"
+msgstr "Ребенок Превью"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Child Released"
+msgstr "Ребенок Выпущенный"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__child_revision
+msgid "Child Revision"
+msgstr "Ребенок Пересмотр"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__child_state
+msgid "Child Status"
+msgstr "Ребенок Статус"
+
+#. module: plm
+#: model:ir.model.fields.selection,name:plm.selection__mrp_bom_line__cutted_type__client
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Client"
+msgstr "Клиент"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid "Code"
+msgstr "Код"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Compare two B.O.M from the B.O.M list interface"
+msgstr "Сравните две спецификации из интерфейса списка спецификаций"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_compare_bom
+msgid "Compare two BOM tool"
+msgstr "Сравните два инструмента BOM"
+
+#. module: plm
+#: model:ir.model,name:plm.model_plm_component_document_rel
+msgid "Component Document Relations"
+msgstr "Взаимоотношения компонентов и документов"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.mrp_bom_list_view_where
+#: model_terms:ir.ui.view,arch_db:plm.plm_bom_list_structure
+msgid "Component Name"
+msgstr "Название компонента"
+
+#. module: plm
+#: model:ir.ui.menu,name:plm.plm_menu_relation
+msgid "Component Relations"
+msgstr "Компонентные отношения"
+
+#. module: plm
+#: model:ir.ui.menu,name:plm.plm_component_menu_view
+msgid "Components"
+msgstr "Компоненты"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_mrp_bom_line_summarize_list
+msgid "Compute Cost"
+msgstr "Расчет стоимости"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid ""
+"Compute product weight due to Normal BOM calculation, using CAD weight or "
+"setting a custom weight."
+msgstr ""
+"Рассчитайте вес продукта с помощью обычного расчета спецификации, используя "
+"вес CAD или задав пользовательский вес."
+
+#. module: plm
+#: model:ir.model,name:plm.model_res_config_settings
+msgid "Config Settings"
+msgstr "Параметры конфигурации"
+
+#. module: plm
+#: model:ir.ui.menu,name:plm.plm_menu_dictionaries
+msgid "Configuration"
+msgstr "Конфигурация"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__configuration
+msgid "Configuration Name"
+msgstr "Имя конфигурации"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form
+#: model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:plm.view_product_client_workflow
+msgid "Confirm Component"
+msgstr "Подтвердить компонент"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_client_workflow
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Confirm Document"
+msgstr "Подтвердить документ"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_mixin.py:0
+#: model:ir.model.fields,field_description:plm.field_report_plmcomponent__count_component_confirmed
+#: model:ir.model.fields.selection,name:plm.selection__ir_attachment__engineering_state__confirmed
+#: model:ir.model.fields.selection,name:plm.selection__product_template__engineering_state__confirmed
+#: model:ir.model.fields.selection,name:plm.selection__revision_plm_mixin__engineering_state__confirmed
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+msgid "Confirmed"
+msgstr "Подтвержденный"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+msgid "Copied starting from : %s."
+msgstr "Скопировано начиная с : %s."
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form
+#: model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
+#: model_terms:ir.ui.view,arch_db:plm.view_product_client_workflow
+msgid "Correct Component"
+msgstr "Правильный компонент"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_client_workflow
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Correct Document"
+msgstr "Правильный документ"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_product_template__standard_price
+msgid "Cost"
+msgstr "Стоимость"
+
+#. module: plm
+#: model:ir.model.fields,help:plm.field_product_template__standard_price
+msgid "Cost of the product, in the default unit of measure of the product."
+msgstr "Стоимость продукта в стандартной единице измерения продукта."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/controllers/main.py:0
+msgid "Could not select database '%s'"
+msgstr "Не удалось выбрать базу данных '%s'"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Create By Me"
+msgstr "Создать мной"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_create_normal_bom
+msgid "Create Normal Bom"
+msgstr "Создать нормальный Bpm"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Create breakages directly from Ticket module <b>only on enterprise</b>"
+msgstr "Создавайте поломки непосредственно из модуля «Теги» <b>только на предприятии</b>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+msgid "Create by Month"
+msgstr "Создать по месяцам"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_web_revision
+msgid "Create new revision from WEB"
+msgstr "Создать новую версию из Интернета"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+msgid "Created : New Revision."
+msgstr "Создано: Новая редакция."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+msgid "Created Normal Bom."
+msgstr "Создать нормальный BPM."
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_access__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc_wizard__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_checkout__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_client__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_component_document_rel__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_dbthread__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_description__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_finishing__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_material__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_temporary__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_temporary_message__create_uid
+#: model:ir.model.fields,field_description:plm.field_plm_treatment__create_uid
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Created by"
+msgstr "Создан"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+msgid "Created by me"
+msgstr "Создано мной"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Created in"
+msgstr "Создано в"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_plm_access__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc_wizard__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_checkout__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_client__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_component_document_rel__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_dbthread__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_description__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_finishing__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_material__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_temporary__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_temporary_message__create_date
+#: model:ir.model.fields,field_description:plm.field_plm_treatment__create_date
+msgid "Created on"
+msgstr "Создано на"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Creation"
+msgstr "Творчество"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/mrp_bom.py:0
+#: model:ir.model.fields,field_description:plm.field_mrp_bom__create_date
+#: model:ir.model.fields,field_description:plm.field_mrp_bom_line__create_date
+msgid "Creation Date"
+msgstr "Создано"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_create_normal_bom
+msgid "Creation of Normal Bom"
+msgstr "Создание нормального Bpm"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+msgid "Creator"
+msgstr "Создатель"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_mrp_bom_line__cutted_type
+msgid "Cutted Compute Type"
+msgstr "Вырезанный тип вычислений"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.plm_action_plm_dbthread
+msgid "DB Thread Action"
+msgstr "Действия с потоком БД"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__create_date
+#: model:ir.model.fields,field_description:plm.field_product_product__create_date
+msgid "Date Created"
+msgstr "Дата Создана"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,field_description:plm.field_product_product__write_date
+msgid "Date Modified"
+msgstr "Дата изменена"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_mixin.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_revision_date
+#: model:ir.model.fields,field_description:plm.field_product_document__engineering_revision_date
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_revision_date
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_revision_date
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_revision_date
+msgid "Datetime Revision"
+msgstr "Дата и время Редакция"
+
+#. module: plm
+#: model:ir.model,name:plm.model_plm_dbthread
+msgid "Db Thread Saving Model"
+msgstr "Модель сохранения потока БД"
+
+#. module: plm
+#: model:ir.ui.menu,name:plm.plm_dbthread_id
+msgid "DbThread"
+msgstr "ДбТред"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/mrp_bom.py:0
+#: code:addons/plm/models/plm_finishing.py:0
+#: code:addons/plm/models/plm_material.py:0
+#: code:addons/plm/models/plm_treatment.py:0
+#: model:ir.model.fields,field_description:plm.field_mrp_bom__description
+#: model:ir.model.fields,field_description:plm.field_mrp_bom_line__description
+#: model:ir.model.fields,field_description:plm.field_plm_finishing__description
+#: model:ir.model.fields,field_description:plm.field_plm_material__description
+#: model:ir.model.fields,field_description:plm.field_plm_treatment__description
+#: model_terms:ir.ui.view,arch_db:plm.bom_structure_all
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form
+#: model_terms:ir.ui.view,arch_db:plm.plm_grp_by_parent
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Description"
+msgstr "Описание"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_descriptions.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_description__description_en
+msgid "Description English"
+msgstr "Описание Английский"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.plm_action_description_form
+#: model:ir.ui.menu,name:plm.menu_description
+#: model_terms:ir.ui.view,arch_db:plm.plm_view_description_list
+msgid "Descriptions"
+msgstr "Описания"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_material.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_material__name
+msgid "Designation"
+msgstr "Обозначение"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_access__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc_wizard__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_checkout__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_client__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_component_document_rel__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_dbthread__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_description__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_finishing__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_material__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_temporary__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_temporary_message__display_name
+#: model:ir.model.fields,field_description:plm.field_plm_treatment__display_name
+#: model:ir.model.fields,field_description:plm.field_report_ir_attachment_file__display_name
+#: model:ir.model.fields,field_description:plm.field_report_plmcomponent__display_name
+msgid "Display Name"
+msgstr "Отображаемое имя"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+#: model_terms:ir.ui.view,arch_db:plm.report_doc_bom
+#: model_terms:ir.ui.view,arch_db:plm.report_prod_bom
+msgid "Doc Name"
+msgstr "Имя документа"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Doc Structure"
+msgstr "Структура документа"
+
+#. module: plm
+#: model:ir.model,name:plm.model_report_plm_report_doc_structure
+msgid "Doc Structure Report"
+msgstr "Отчет о структуре документа"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Document"
+msgstr "Документ"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+msgid "Document Already in the system"
+msgstr "Документ уже в системе"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+msgid "Document Name"
+msgstr "Имя документа"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__document_rel_count
+#: model:ir.model.fields,field_description:plm.field_product_document__document_rel_count
+msgid "Document Rel Count"
+msgstr "Относительное количество документов"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Document Relation Kind"
+msgstr "Тип отношения документа"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.plm_action_document_relations
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_list_view
+msgid "Document Relations"
+msgstr "Отношения с документами"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__document_type
+#: model:ir.model.fields,field_description:plm.field_product_document__document_type
+msgid "Document Type"
+msgstr "Tип документа"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_plm_dbthread__documement_name_version
+msgid "Document name and version"
+msgstr "Название документа и его версия"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_search_tooltip
+msgid "Document released"
+msgstr "Документ выпущен"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.action_report_doc_structure
+msgid "Document structure"
+msgstr "Структура документа отчета"
+
+#. module: plm
+#: model:ir.model,name:plm.model_plm_checkout
+msgid "Document that are locked from someone"
+msgstr "Документ, который заблокирован от кого-либо"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/mrp_bom_line.py:0
+#: model:ir.actions.act_window,name:plm.plm_action_document_form
+#: model:ir.ui.menu,name:plm.ir_attachment_form
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_list
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Documents"
+msgstr "Документ"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_list
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_list
+msgid "Documents in Check-Out"
+msgstr "Документы при выезде"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid ""
+"Download a zip file containing all documents/and printout attached to a "
+"product or BOM."
+msgstr ""
+"Загрузите zip-файл, содержащий все документы/и распечатки, прикрепленные к "
+"продукту или спецификации."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_mixin.py:0
+#: model:ir.model.fields,field_description:plm.field_report_plmcomponent__count_component_draft
+#: model:ir.model.fields.selection,name:plm.selection__ir_attachment__engineering_state__draft
+#: model:ir.model.fields.selection,name:plm.selection__product_template__engineering_state__draft
+#: model:ir.model.fields.selection,name:plm.selection__revision_plm_mixin__engineering_state__draft
+msgid "Draft"
+msgstr "Черновик"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_web_3d
+msgid "Enable 3D WebGl"
+msgstr "Включить 3D WebGL"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_web_3d_sale
+msgid "Enable 3D WebGl for e-commerce and sale"
+msgstr "Включить 3D WebGl для электронной коммерции и продаж"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_auto_engcode
+msgid "Enable Automatic Engineering Code"
+msgstr "Включить автоматический инженерный код"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_bom_summarize
+msgid "Enable B.O.M. summarisation during the client upload"
+msgstr "Включить сомаризацию Bom во время загрузки клиента"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__install_consumption_plan_feature
+msgid "Enable Consumption Plan Feature"
+msgstr "Включить функцию плана потребления"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_activity_validation
+msgid "Enable Eco /Ecr"
+msgstr "Включить Эко / Ecr"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_pdf_workorder
+msgid "Enable Plm PDF document inside workorder"
+msgstr "Включить документ Plm PDF внутри рабочего задания"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_breakages
+msgid "Enable breakages management"
+msgstr "Включить управление тормозами"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_ent_breakages_helpdesk
+msgid "Enable breakages management on Helpdesk (Enterprise only)"
+msgstr "Включить управление поломками в Helpdesk (только Enterprise)"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Enable or Disable Template Consumption Plans"
+msgstr "Включить или отключить шаблоны планов потребления"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Eng. Document Name"
+msgstr "Имя инженерного документа"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_branch_revision
+#: model:ir.model.fields,field_description:plm.field_product_document__engineering_branch_revision
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_branch_revision
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_branch_revision
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_branch_revision
+msgid "Engineering Branch index"
+msgstr "Индекс отрасли машиностроения"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_code
+#: model:ir.model.fields,field_description:plm.field_product_document__engineering_code
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_code
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_code
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_code
+msgid "Engineering Code"
+msgstr "Hомер части"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_code_editable
+#: model:ir.model.fields,field_description:plm.field_product_document__engineering_code_editable
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_code_editable
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_code_editable
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_code_editable
+msgid "Engineering Code Editable"
+msgstr "Редактируемый инженерный код"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_product_product__is_engcode_editable
+#: model:ir.model.fields,field_description:plm.field_product_template__is_engcode_editable
+msgid "Engineering Editable"
+msgstr "Редактируемый инженерный"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_template_form_view_plm_custom
+msgid "Engineering Information"
+msgstr "Инженерная информация"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.action_plm_component_base
+#: model:ir.actions.act_window,name:plm.action_plm_component_base_cad_form
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_tree
+msgid "Engineering Parts"
+msgstr "Инженерные части"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form
+#: model_terms:ir.ui.view,arch_db:plm.view_product_client_workflow
+msgid "Engineering Product"
+msgstr "Инженерный продукт"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_revision_count
+#: model:ir.model.fields,field_description:plm.field_mrp_bom__bom_revision_count
+#: model:ir.model.fields,field_description:plm.field_product_document__engineering_revision_count
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_revision_count
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_revision_count
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_revision_count
+msgid "Engineering Revision Count"
+msgstr "Счетчик ревизий"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_revision
+#: model:ir.model.fields,field_description:plm.field_product_document__engineering_revision
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_revision
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_revision
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_revision
+msgid "Engineering Revision index"
+msgstr "Пересмотр"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_revision_letter
+#: model:ir.model.fields,field_description:plm.field_product_document__engineering_revision_letter
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_revision_letter
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_revision_letter
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_revision_letter
+msgid "Engineering Revision letter"
+msgstr "Письмо о пересмотре технического решения"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_state
+#: model:ir.model.fields,field_description:plm.field_product_document__engineering_state
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_state
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_state
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_state
+msgid "Engineering Status"
+msgstr "Статус разработки"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_branch_revision_letter
+#: model:ir.model.fields,field_description:plm.field_product_document__engineering_branch_revision_letter
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_branch_revision_letter
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_branch_revision_letter
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_branch_revision_letter
+msgid "Engineering Sub Revision letter"
+msgstr "Письмо о пересмотре инженерного решения"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Engineering revision"
+msgstr "Техническая ревизия"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_plm_dbthread__error_message
+msgid "Error message"
+msgstr "Сообщение об ошибке"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid ""
+"Example Result:\n"
+"                                    <br/>"
+msgstr ""
+"Пример результата:\n"
+"                                    <br/>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid ""
+"Example Result:\n"
+"                            <br/>"
+msgstr ""
+"Пример результата:\n"
+"                                    <br/>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid ""
+"Example Values:\n"
+"                                    <br/>"
+msgstr ""
+"Примеры значений:\n"
+"                                    <br/>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid ""
+"Example Values:\n"
+"                            <br/>"
+msgstr ""
+"Примеры значений:\n"
+"                                    <br/>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Example: %s"
+msgstr "Пример: %s"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Example: (%s, %s %s, %s_%s, %s/%s)"
+msgstr "Пример: (%s, %s %s, %s_%s, %s/%s)"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Example: UNI"
+msgstr "Пример: UNI"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Feature Example: A"
+msgstr "Пример характеристики: A"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Feature Example: B"
+msgstr "Пример характеристики: Б"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Feature Example: C"
+msgstr "Пример характеристики: С"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Feature.Value1 (in component form) = 1"
+msgstr "Характерная черта.Значение1 (в компонентной форме) = 1"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Feature.Value1 (in component form) = 2"
+msgstr "Характерная черта.Значение2 (в компонентной форме) = 2"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Feature.Value1 (in component form) = 3"
+msgstr "Характерная черта.Значение3 (в компонентной форме) = 3"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Feature.Value2 (in component form) = 2"
+msgstr "Feature.Value2 (в компонентной форме) = 2"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Feature.Value3 (in component form) = 3"
+msgstr "Feature.Value3 (в компонентной форме) = 3"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__datas
+#: model:ir.model.fields,field_description:plm.field_product_document__datas
+msgid "File Content (base64))"
+msgstr "Содержимое файла (base64))"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "File Data:"
+msgstr "Данные файла:"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+#: model_terms:ir.ui.view,arch_db:plm.report_doc_bom
+#: model_terms:ir.ui.view,arch_db:plm.report_prod_bom
+msgid "File Name"
+msgstr "Имя файла"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_report_ir_attachment_file__file_size
+msgid "File Size"
+msgstr "Размер файлов"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__library_path
+#: model:ir.model.fields,field_description:plm.field_product_document__library_path
+msgid "File library path"
+msgstr "Путь к библиотеке файлов"
+
+#. module: plm
+#: model:ir.model,name:plm.model_report_ir_attachment_file
+msgid "Files details by Directory"
+msgstr "Детали файлов по каталогу"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Filter on documents changed by me"
+msgstr "Фильтр по измененным мной документам"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Filter on documents created by me"
+msgstr "Фильтровать созданные мной документы"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+msgid "Filter on documents with error"
+msgstr "Фильтр по документам с ошибками"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid ""
+"Final Description: Standard Description + Format Feature Composed +\n"
+"                                            Normative Rule\n"
+"                                            <br/>\n"
+"                                            <b>STD 1 Title n°2-3 UNI</b>"
+msgstr ""
+"Окончательное описание: стандартное описание + форматирование функций +\n"
+"                                            Нормативное правило\n"
+"                                            <br/>\n"
+"                                            <b>STD 1 Заголовок n°2-3 UNI</b>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid ""
+"Final Description: Standard Description + Format Feature Composed +\n"
+"                                            Normative Rule\n"
+"                                            <br/>\n"
+"                                            <b>STD A 1 Title n°B-2-C/3 UNI</b>"
+msgstr ""
+"Окончательное описание: стандартное описание + форматирование функций +\n"
+"                                            Нормативное правило\n"
+"                                            <br/>\n"
+"                                            <b>STD A 1 Заголовок n°B-2-C/3 UNI</b>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid ""
+"Final Description: Standard Description + Format Feature Composed + Normative\n"
+"                                    Rule\n"
+"                                    <br/>\n"
+"                                    <b>STD 1 Title n°B-2-C/3 UNI</b>"
+msgstr ""
+"Окончательное описание: Стандартное описание + Формат Характеристика Составной + Нормативный\n"
+"                                    Правило\n"
+"                                    <br/>\n"
+"                                    <b>STD 1 Заголовок n°B-2-C/3 UNI</b>"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_finishing
+msgid "Finishing"
+msgstr "Отделка"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.plm_action_finishing_form
+#: model:ir.ui.menu,name:plm.menu_finishing
+#: model_terms:ir.ui.view,arch_db:plm.plm_view_finishing_list
+#: model_terms:ir.ui.view,arch_db:plm.plm_view_treatment_list
+msgid "Finishings"
+msgstr "Oтделки"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__message_follower_ids
+#: model:ir.model.fields,field_description:plm.field_product_template__message_follower_ids
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__message_follower_ids
+msgid "Followers"
+msgstr "Последователи"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__message_partner_ids
+#: model:ir.model.fields,field_description:plm.field_product_template__message_partner_ids
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Последователи (Партнеры)"
+
+#. module: plm
+#: model:ir.model.fields,help:plm.field_ir_attachment__activity_type_icon
+#: model:ir.model.fields,help:plm.field_product_template__activity_type_icon
+#: model:ir.model.fields,help:plm.field_revision_plm_mixin__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Шрифт, отличный значок, например. к.-а.-задачи"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_product_only_latest
+msgid "Force last version on Manufacturing"
+msgstr "Принудительно установить последнюю версию для производства"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_sale_only_latest
+msgid "Force last version on Sale"
+msgstr "Выставить последнюю версию на продажу"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_purchase_only_latest
+msgid "Force last version on purchase"
+msgstr "Принудительно использовать последнюю версию при покупке"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_descriptions.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_description__fmt1
+msgid "Format Feature 1"
+msgstr "Формат Особенность 1"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_descriptions.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_description__fmt2
+msgid "Format Feature 2"
+msgstr "Формат Особенность 2"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_descriptions.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_description__fmt3
+msgid "Format Feature 3"
+msgstr "Формат Особенность 3"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_descriptions.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_description__fmtend
+msgid "Format Feature Composed"
+msgstr "Формат Характеристика Составление"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Format Feature Composed = %s Title n°%s-%s"
+msgstr "Формат Характеристика Составление = %s Заголовок n°%s-%s"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_document_relation_kanban_view
+#: model_terms:ir.ui.view,arch_db:plm.document_kanban_view
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_form_view
+msgid "Founding Component"
+msgstr "Основополагающий компонент"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Generate Engineering Code by sequence"
+msgstr "Сгенерировать инженерный код по последовательности"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,field_description:plm.field_product_product__source_product
+msgid "Generated From"
+msgstr "Создано из"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_finishing.py:0
+#: code:addons/plm/models/plm_material.py:0
+#: code:addons/plm/models/plm_treatment.py:0
+#: model:ir.model.fields,help:plm.field_plm_finishing__sequence
+#: model:ir.model.fields,help:plm.field_plm_material__sequence
+#: model:ir.model.fields,help:plm.field_plm_treatment__sequence
+msgid "Gives the sequence order when displaying a list of product categories."
+msgstr "Задает порядок следования при отображении списка категорий продуктов."
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_graph_view
+msgid "Graph"
+msgstr "Rраф"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_grp_by_parent
+msgid "Group By Parent"
+msgstr "Группировать по родителю"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Group By..."
+msgstr "Группа по..."
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Group by..."
+msgstr "Группа по..."
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.plm_action_res_groups
+#: model:ir.ui.menu,name:plm.plm_groups
+msgid "Groups"
+msgstr "Группы"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_mrp_bom_line__hasChildBoms
+msgid "Has Children Boms"
+msgstr "Детская спецификация"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__has_error
+#: model:ir.model.fields,field_description:plm.field_product_document__has_error
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+msgid "Has Error"
+msgstr "Ошибка"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__has_message
+#: model:ir.model.fields,field_description:plm.field_product_template__has_message
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__has_message
+msgid "Has Message"
+msgstr "Есть сообщение"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Help"
+msgstr "Помощь"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "History"
+msgstr "История"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__hostname
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__hostname
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+msgid "Hostname"
+msgstr "Имя хоста"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__id
+#: model:ir.model.fields,field_description:plm.field_plm_access__id
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__id
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc_wizard__id
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__id
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__id
+#: model:ir.model.fields,field_description:plm.field_plm_checkout__id
+#: model:ir.model.fields,field_description:plm.field_plm_client__id
+#: model:ir.model.fields,field_description:plm.field_plm_component_document_rel__id
+#: model:ir.model.fields,field_description:plm.field_plm_dbthread__id
+#: model:ir.model.fields,field_description:plm.field_plm_description__id
+#: model:ir.model.fields,field_description:plm.field_plm_finishing__id
+#: model:ir.model.fields,field_description:plm.field_plm_material__id
+#: model:ir.model.fields,field_description:plm.field_plm_temporary__id
+#: model:ir.model.fields,field_description:plm.field_plm_temporary_message__id
+#: model:ir.model.fields,field_description:plm.field_plm_treatment__id
+#: model:ir.model.fields,field_description:plm.field_report_ir_attachment_file__id
+#: model:ir.model.fields,field_description:plm.field_report_plmcomponent__id
+msgid "ID"
+msgstr ""
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__activity_exception_icon
+#: model:ir.model.fields,field_description:plm.field_product_template__activity_exception_icon
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__activity_exception_icon
+msgid "Icon"
+msgstr "Иконка"
+
+#. module: plm
+#: model:ir.model.fields,help:plm.field_ir_attachment__activity_exception_icon
+#: model:ir.model.fields,help:plm.field_product_template__activity_exception_icon
+#: model:ir.model.fields,help:plm.field_revision_plm_mixin__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Значок, обозначающий исключение Дела."
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid ""
+"If Normative Rule is defined, it will be added at the end of the "
+"description."
+msgstr ""
+"Если нормативное правило определено, оно будет добавлено в конце описания."
+
+#. module: plm
+#: model:ir.model.fields,help:plm.field_ir_attachment__message_needaction
+#: model:ir.model.fields,help:plm.field_product_template__message_needaction
+#: model:ir.model.fields,help:plm.field_revision_plm_mixin__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Если флажок установлен, новые сообщения требуют вашего внимания."
+
+#. module: plm
+#: model:ir.model.fields,help:plm.field_ir_attachment__message_has_error
+#: model:ir.model.fields,help:plm.field_ir_attachment__message_has_sms_error
+#: model:ir.model.fields,help:plm.field_product_template__message_has_error
+#: model:ir.model.fields,help:plm.field_product_template__message_has_sms_error
+#: model:ir.model.fields,help:plm.field_revision_plm_mixin__message_has_error
+#: model:ir.model.fields,help:plm.field_revision_plm_mixin__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr ""
+"Если этот флажок установлен, некоторые сообщения имеют ошибку доставки."
+
+#. module: plm
+#: model:ir.model.fields,help:plm.field_plm_temporary__summarize
+msgid ""
+"If set as true, when a Bom line comes from EBOM was in the old normal BOM "
+"two lines where been summarized."
+msgstr ""
+"Если установлено значение true, когда строка спецификации исходит из EBOM, в"
+" старой обычной спецификации две строки были суммированы."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: model:ir.model.fields,help:plm.field_ir_attachment__is_plm
+#: model:ir.model.fields,help:plm.field_product_document__is_plm
+msgid ""
+"If the flag is set, the document is managed by the plm module, and imply its"
+" backup at each save and the visibility on some views."
+msgstr ""
+"Если флаг установлен, то документом управляет модуль plm, и подразумевается "
+"его резервное копирование при каждом сохранении и видимость на некоторых "
+"представлениях."
+
+#. module: plm
+#: model:ir.model.fields,help:plm.field_plm_temporary__migrate_custom_lines
+msgid ""
+"If the user adds custom BOM lines in the revision 0 BOM, than makes the "
+"revision 1, creates it's engineering BOM and than create the new Normal BOM "
+"form EBOM your revision 0 custom BOM lines are created in the new BOM"
+msgstr ""
+"Если пользователь добавляет пользовательские строки спецификации в "
+"спецификацию версии 0, затем создает редакцию 1, создает ее инженерную "
+"спецификацию, а затем создает новую форму обычной спецификации EBOM, в новой"
+" спецификации создаются пользовательские строки спецификации версии 0"
+
+#. module: plm
+#. odoo-javascript
+#: code:addons/plm/static/src/xml/mrp_bom_overview_table_inherit.xml:0
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid "Image"
+msgstr "Изображение"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Indexed Content"
+msgstr "Индексированный контент"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_bom_form_view
+msgid "Info:"
+msgstr "Информация:"
+
+#. module: plm
+#: model:res.groups,name:plm.group_plm_integration_user
+msgid "Integration User"
+msgstr "Пользователь интеграции"
+
+#. module: plm
+#: model:ir.model,name:plm.model_ir_attachment
+msgid "Ir Attachment"
+msgstr "Вложение"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__is_plm
+#: model:ir.model.fields,field_description:plm.field_product_document__is_plm
+msgid "Is A Plm Document"
+msgstr "Является документом PLM"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__is_checkout
+#: model:ir.model.fields,field_description:plm.field_product_document__is_checkout
+msgid "Is Checked-Out"
+msgstr "Является Проверено-Аут"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__message_is_follower
+#: model:ir.model.fields,field_description:plm.field_product_template__message_is_follower
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__message_is_follower
+msgid "Is Follower"
+msgstr "Rвляется подписчиком"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__is_library
+#: model:ir.model.fields,field_description:plm.field_product_document__is_library
+msgid "Is Library file"
+msgstr "Библиотечный файл"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__is_linkedcomponents
+#: model:ir.model.fields,field_description:plm.field_product_document__is_linkedcomponents
+msgid "Is Linked Components"
+msgstr "Является Связанные компоненты"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Is a Plm Document"
+msgstr "Является PLM-документом"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_category.py:0
+#: code:addons/plm/models/product_product.py:0
+#: code:addons/plm/models/product_template.py:0
+#: model:ir.model.fields,field_description:plm.field_product_category__kit_bom
+#: model:ir.model.fields,field_description:plm.field_product_product__kit_bom
+#: model:ir.model.fields,field_description:plm.field_product_template__kit_bom
+msgid "KIT Bom Type"
+msgstr "Тип бомбы KIT"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_product_product__kanban_dashboard
+msgid "Kanban Dashboard"
+msgstr "Kanban Панель приборов"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Kind"
+msgstr "Добрый"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__link_kind
+msgid "Kind of Link"
+msgstr "Вид ссылки"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+#: model_terms:ir.ui.view,arch_db:plm.view_mrp_bom_filter_inherit
+msgid "Last Month"
+msgstr "Прошлый месяц"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_access__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc_wizard__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_checkout__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_client__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_component_document_rel__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_dbthread__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_description__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_finishing__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_material__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_temporary__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_temporary_message__write_uid
+#: model:ir.model.fields,field_description:plm.field_plm_treatment__write_uid
+msgid "Last Updated by"
+msgstr "Последний раз обновлялся"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_access__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc_wizard__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_checkout__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_client__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_component_document_rel__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_dbthread__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_description__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_finishing__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_material__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_temporary__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_temporary_message__write_date
+#: model:ir.model.fields,field_description:plm.field_plm_treatment__write_date
+msgid "Last Updated on"
+msgstr "Дата последнего обновления"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+#: model_terms:ir.ui.view,arch_db:plm.view_mrp_bom_filter_inherit
+msgid "Last Week"
+msgstr "На прошлой неделе"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+#: model_terms:ir.ui.view,arch_db:plm.view_mrp_bom_filter_inherit
+msgid "Last Year"
+msgstr "В прошлом году"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.ir_attachment_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+msgid "Latest"
+msgstr "Самый последний"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_backupdoc_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_search_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_checkout_search
+msgid "Latest 7 Days"
+msgstr "Последние 7 дней"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Latest Child"
+msgstr "Последний ребенок"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Latest Parent"
+msgstr "Последний родитель"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+#: model_terms:ir.ui.view,arch_db:plm.bom_structure_all
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+#: model_terms:ir.ui.view,arch_db:plm.report_doc_bom
+#: model_terms:ir.ui.view,arch_db:plm.report_prod_bom
+msgid "Level"
+msgstr "Уровень"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product_document_rel.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_component_document_rel__component_id
+msgid "Linked Component"
+msgstr "Связанный компонент"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,field_description:plm.field_product_product__linkeddocuments
+#: model:ir.model.fields,field_description:plm.field_product_template__linkeddocuments
+msgid "Linked Docs"
+msgstr "Связанные документы"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product_document_rel.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_component_document_rel__document_id
+msgid "Linked Document"
+msgstr "Связанный документ"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
+msgid "Linked Documents"
+msgstr "Связанные документы"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__linkedcomponents
+#: model:ir.model.fields,field_description:plm.field_product_document__linkedcomponents
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Linked Parts"
+msgstr "Связанные части"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_mrp_bom_update
+msgid "MRP B.O.M Update"
+msgstr "Обновление спецификации ППМ"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_date_bom
+msgid "Manage BOM due to date"
+msgstr "Управление спецификацией к дате"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_cutted_parts
+msgid "Manage BOM explosion for cut parts"
+msgstr "Управление разверткой спецификации для вырезанных деталей"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_suspended
+msgid "Manage Product suspend code"
+msgstr "Управление кодом приостановки продукта"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Manage breakage on your products"
+msgstr "Управляйте поломкой ваших продуктов"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_report_language_helper
+msgid "Manage more Language PLM reports"
+msgstr "Управление отчетами PLM на нескольких языках"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Manage product Suspension State on workFlow for document and product"
+msgstr ""
+"Управление состоянием приостановки продукта в рабочем процессе для документа"
+" и продукта"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_spare
+msgid "Manage spare BOM and Spare Parts Manual"
+msgstr "Управление запасными спецификациями и Руководство по запасным частям"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Manufacturing"
+msgstr "Изготовление"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_material
+msgid "Material"
+msgstr "Материал"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_form
+#: model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
+msgid "Material / Surface / Treatment"
+msgstr "Материал / поверхность / обработка"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.plm_action_material_form
+#: model:ir.ui.menu,name:plm.menu_material
+#: model_terms:ir.ui.view,arch_db:plm.plm_view_material_list
+msgid "Materials"
+msgstr "Материалы"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__message_has_error
+#: model:ir.model.fields,field_description:plm.field_product_template__message_has_error
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__message_has_error
+msgid "Message Delivery error"
+msgstr "Ошибка доставки сообщения"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__message_ids
+#: model:ir.model.fields,field_description:plm.field_product_template__message_ids
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__message_ids
+msgid "Messages"
+msgstr "Сообщения"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.document_document_relation_kanban_view
+#: model_terms:ir.ui.view,arch_db:plm.document_kanban_view
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_form_view
+msgid "Missing Component"
+msgstr "Недостающий компонент"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.action_report_prod_structure
+msgid "Missing product structure"
+msgstr "Отчет о структуре продукта"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__desc_modify
+#: model:ir.model.fields,field_description:plm.field_product_document__desc_modify
+#: model:ir.model.fields,field_description:plm.field_product_product__desc_modify
+msgid "Modification Description"
+msgstr "Описание модификации"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_report_ir_attachment_file__month
+msgid "Month"
+msgstr "Месяц"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+msgid "Mrp Bom"
+msgstr "Мрп Бом"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_document_multi_site
+msgid "Multi server storage system"
+msgstr "Mногосторонняя система хранения"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__must_update_from_cad
+#: model:ir.model.fields,field_description:plm.field_product_document__must_update_from_cad
+msgid "Must Update form CAD"
+msgstr "Необходимо обновить форму CAD"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plm.field_product_template__my_activity_date_deadline
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Крайний срок моей активности"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "N.Rev."
+msgstr "Н.Преподобный."
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_plm_access__name
+#: model_terms:ir.ui.view,arch_db:plm.attachment_change_impact_report_template
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+msgid "Name"
+msgstr "Имя"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product_kanban.py:0
+msgid "New Component"
+msgstr "Новый компонент"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_mixin.py:0
+msgid "New version created from Code %s Rev. %s"
+msgstr "Новая версия создана из кода %s Преподобный. %s"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plm.field_product_template__activity_calendar_event_id
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__activity_calendar_event_id
+msgid "Next Activity Calendar Event"
+msgstr "Следующее событие календаря активности"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__activity_date_deadline
+#: model:ir.model.fields,field_description:plm.field_product_template__activity_date_deadline
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Следующий срок мероприятия"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__activity_summary
+#: model:ir.model.fields,field_description:plm.field_product_template__activity_summary
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__activity_summary
+msgid "Next Activity Summary"
+msgstr "Резюме следующего действия"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__activity_type_id
+#: model:ir.model.fields,field_description:plm.field_product_template__activity_type_id
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__activity_type_id
+msgid "Next Activity Type"
+msgstr "Следующий Тип Мероприятия"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_kanban_hinerit
+msgid "No Image"
+msgstr "Нет изображения"
+
+#. module: plm
+#: model:ir.model.fields.selection,name:plm.selection__mrp_bom_line__cutted_type__none
+msgid "None"
+msgstr "Никто"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/mrp_bom.py:0
+#: model:ir.model.fields.selection,name:plm.selection__mrp_bom__type__normal
+msgid "Normal BoM"
+msgstr "Производство этого продукта"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.plm_action_normal_form
+msgid "Normal BoMs"
+msgstr "Обычные спецификации"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Normalized features formatting"
+msgstr "Нормализованный характеристики форматирование"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_descriptions.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_description__unitab
+msgid "Normative Rule"
+msgstr "Нормативное правило"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Normative Rule = UNI"
+msgstr "Нормативное правило = UNI"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Normative reference"
+msgstr "Нормативная ссылка"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_descriptions.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_description__name
+msgid "Note to Description"
+msgstr "Примечание к описанию"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_description
+msgid "Note to help selection"
+msgstr "Примечание для помощи в выборе"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Notes"
+msgstr "Примечания"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__notes
+msgid "Notes: "
+msgstr "Примечания: "
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__message_needaction_counter
+#: model:ir.model.fields,field_description:plm.field_product_template__message_needaction_counter
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Количество действий"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__message_has_error_counter
+#: model:ir.model.fields,field_description:plm.field_product_template__message_has_error_counter
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__message_has_error_counter
+msgid "Number of errors"
+msgstr "Число ошибок"
+
+#. module: plm
+#: model:ir.model.fields,help:plm.field_ir_attachment__message_needaction_counter
+#: model:ir.model.fields,help:plm.field_product_template__message_needaction_counter
+#: model:ir.model.fields,help:plm.field_revision_plm_mixin__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Количество сообщений, требующих действия"
+
+#. module: plm
+#: model:ir.model.fields,help:plm.field_ir_attachment__message_has_error_counter
+#: model:ir.model.fields,help:plm.field_product_template__message_has_error_counter
+#: model:ir.model.fields,help:plm.field_revision_plm_mixin__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Количество сообщений с ошибкой доставки"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.report_doc_bom
+#: model_terms:ir.ui.view,arch_db:plm.report_prod_bom
+msgid "N° Revision"
+msgstr "№ Редакция"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_mixin.py:0
+#: model:ir.model.fields,field_description:plm.field_report_plmcomponent__count_component_obsoleted
+#: model:ir.model.fields.selection,name:plm.selection__ir_attachment__engineering_state__obsoleted
+#: model:ir.model.fields.selection,name:plm.selection__product_template__engineering_state__obsoleted
+#: model:ir.model.fields.selection,name:plm.selection__revision_plm_mixin__engineering_state__obsoleted
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+msgid "Obsoleted"
+msgstr "Устаревший"
+
+#. module: plm
+#: model:ir.module.category,name:plm.odooplm_module_category
+msgid "OdooPLM"
+msgstr ""
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_product_product_normal_form_view_inherit
+msgid "OdooPLM Information"
+msgstr "Информация OdooPLM"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_bom_form_view
+msgid "Open Related Boms"
+msgstr "Открыть Связанные Бомбы"
+
+#. module: plm
+#: model:ir.model,name:plm.model_plm_cad_open
+#: model:ir.model,name:plm.model_plm_cad_open_bck
+msgid "Opens made by the client"
+msgstr "Открытия, сделанные клиентом"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__operation_type
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__operation_type
+msgid "Operation Type"
+msgstr "Тип Операция"
+
+#. module: plm
+#: model:ir.model.fields.selection,name:plm.selection__mail_activity_type__change_activity_type__plm_activity
+msgid "Order"
+msgstr "Заказ"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__orig_data_fstore
+msgid "Original FStore Name"
+msgstr "Оригинальное имя FStore"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: model:ir.model.fields.selection,name:plm.selection__ir_attachment__document_type__other
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Other"
+msgstr "Другие"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_product_product_pdf
+msgid "PDF Drawings"
+msgstr "PDF-чертежи"
+
+#. module: plm
+#: model:ir.ui.menu,name:plm.plm_menu
+msgid "PLM"
+msgstr ""
+
+#. module: plm
+#: model:res.groups,name:plm.group_plm_release_users
+msgid "PLM / Release Users"
+msgstr "PLM/Выпуск пользователей"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_box
+msgid "PLM Box"
+msgstr "PLM-коробка"
+
+#. module: plm
+#: model:ir.model,name:plm.model_plm_client
+msgid "PLM Client Support object"
+msgstr "plm.клиент"
+
+#. module: plm
+#: model:ir.model,name:plm.model_plm_description
+msgid "PLM Descriptions"
+msgstr "PLM-описания"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "PLM Infos:"
+msgstr "Информация о PLM:"
+
+#. module: plm
+#: model:res.groups,name:plm.group_plm_readonly_released
+msgid "PLM Integration Readonly"
+msgstr "Интеграция с PLM Только для чтения"
+
+#. module: plm
+#: model:ir.model,name:plm.model_plm_material
+msgid "PLM Materials"
+msgstr "PLM-материалы"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_checkout.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_checkout__hostpws
+msgid "PWS Directory"
+msgstr "Справочник PWS"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__pws_path
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__pws_path
+msgid "PWS Path"
+msgstr "Путь PWS"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_pack_and_go
+msgid "Pack and go"
+msgstr "Упакуйте и идите"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Parent"
+msgstr "Родитель"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Parent Confirmed"
+msgstr "Родитель подтвержден"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__parent_type
+msgid "Parent Document Type"
+msgstr "Tип документа"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__parent_linked
+msgid "Parent Linked Components"
+msgstr "Родительские связанные компоненты"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__parent_preview
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_form_view
+msgid "Parent Preview"
+msgstr "Предварительный просмотр для родителей"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_docbom_search
+msgid "Parent Released"
+msgstr "Родитель освобожден"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__parent_revision
+msgid "Parent Revision"
+msgstr "Родительская модификация"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__parent_state
+msgid "Parent Status"
+msgstr "Родительский статус"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__engineering_branch_parent_id
+#: model:ir.model.fields,field_description:plm.field_product_document__engineering_branch_parent_id
+#: model:ir.model.fields,field_description:plm.field_product_product__engineering_branch_parent_id
+#: model:ir.model.fields,field_description:plm.field_product_template__engineering_branch_parent_id
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__engineering_branch_parent_id
+msgid "Parent branch"
+msgstr "Родительская ветвь"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.constraint,message:plm.constraint_ir_attachment_relation_parent_child_check
+msgid "Parent child product must be different !"
+msgstr "Родительский и дочерний продукт должны отличаться!"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+msgid "Part %r cannot be updated"
+msgstr "Часть %r не может быть обновлена"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_mixin.py:0
+#: model:ir.model.constraint,message:plm.constraint_ir_attachment_engineering_uniq
+#: model:ir.model.constraint,message:plm.constraint_product_template_engineering_uniq
+#: model:ir.model.constraint,message:plm.constraint_revision_plm_mixin_engineering_uniq
+msgid "Part Number has to be unique!"
+msgstr "Номер детали должен быть уникальным!"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_component_base_search
+msgid "Parts"
+msgstr "Части"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+msgid "Permission denied for folder %r."
+msgstr "Отказано в доступе к папке %r."
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_backup_document.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__existingfile
+msgid "Physical Document Location"
+msgstr "Местоположение физического документа"
+
+#. module: plm
+#: model:mail.activity.type,name:plm.mail_activity_plm_activity
+msgid "Plm Activity"
+msgstr "Plm Деятельность"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.action_plm_cad_open
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_list
+msgid "Plm Cad Open"
+msgstr "Plm Кад Открыть"
+
+#. module: plm
+#: model:ir.actions.act_window,name:plm.action_plm_cad_open_bck
+#: model:ir.actions.server,name:plm.ir_cron_scheduler_bck_cad_open_ir_actions_server
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_form_bck
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_list_bck
+msgid "Plm Cad Open Bck"
+msgstr "Plm Кад Открыть Назад"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_cad_open_form
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_checkout_form
+msgid "Plm checkout"
+msgstr "Plm проверять, выписываться"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_auto_internalref
+msgid "Populate internal reference with engineering part number"
+msgstr "Заполните внутреннюю ссылку номером инженерной части"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.bom_structure_all
+msgid "Pos."
+msgstr "Поз."
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_bom_list_structure
+msgid "Position"
+msgstr "Позиция"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: model:ir.model.fields.selection,name:plm.selection__ir_attachment__document_type__pr
+msgid "Presentation"
+msgstr "Презентация"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_plm_temporary__migrate_custom_lines
+msgid "Preserve custom BOM lines from previous Normal BOM revision"
+msgstr ""
+"Сохранение пользовательских строк спецификации из предыдущей редакции "
+"обычной спецификации"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.product_change_impact_report_template
+#: model_terms:ir.ui.view,arch_db:plm.report_doc_bom
+#: model_terms:ir.ui.view,arch_db:plm.report_prod_bom
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_backupdoc
+msgid "Preview"
+msgstr "Превью"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: code:addons/plm/models/plm_backup_document.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__preview
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__preview
+#: model:ir.model.fields,field_description:plm.field_plm_checkout__preview
+#: model:ir.model.fields,field_description:plm.field_product_document__preview
+msgid "Preview Content"
+msgstr "Просмотр контента"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: model:ir.model.fields,help:plm.field_ir_attachment__printout
+#: model:ir.model.fields,help:plm.field_product_document__printout
+msgid "Print PDF content."
+msgstr "Распечатать PDF-контент."
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_ir_attachment_pdf
+msgid "Print Pdf"
+msgstr "Распечатать PDF"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: code:addons/plm/models/plm_backup_document.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__printout
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__printout
+#: model:ir.model.fields,field_description:plm.field_product_document__printout
+msgid "Printout Content"
+msgstr "Распечатка содержимого"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__printout_name
+#: model:ir.model.fields,field_description:plm.field_product_document__printout_name
+msgid "Printout Name"
+msgstr "Имя распечатки"
+
+#. module: plm
+#: model:ir.model,name:plm.model_report_plm_report_prod_structure
+msgid "Prod Doc Structure Report"
+msgstr "Отчет о структуре документа о продукции"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/mrp_bom_line.py:0
+#: model_terms:ir.ui.view,arch_db:plm.plm_grp_by_parent
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Product"
+msgstr "Продукт"
+
+#. module: plm
+#: model:ir.ui.menu,name:plm.plm_product_cad_search
+msgid "Product Cad Search"
+msgstr "Поиск продукта CAD"
+
+#. module: plm
+#: model:ir.model,name:plm.model_product_category
+msgid "Product Category"
+msgstr "Категория товара"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.action_report_product_change_impact
+msgid "Product Change Impact"
+msgstr "Влияние изменения продукта"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/res_config_settings.py:0
+#: model:ir.model.fields,field_description:plm.field_res_config_settings__module_plm_product_description_language_helper
+msgid "Product Description Language Helper"
+msgstr "Описание продукта Language Helper"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+#: code:addons/plm/models/product_template.py:0
+msgid "Product Engineering"
+msgstr "Разработка продукта"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.bom_structure_all
+#: model_terms:ir.ui.view,arch_db:plm.report_doc_bom
+#: model_terms:ir.ui.view,arch_db:plm.report_prod_bom
+msgid "Product Name"
+msgstr "Наименование продукта"
+
+#. module: plm
+#: model:ir.model,name:plm.model_product_product
+msgid "Product Product"
+msgstr "Вариант продукта"
+
+#. module: plm
+#: model:ir.model,name:plm.model_product_template
+msgid "Product Template"
+msgstr "Товар"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_grp_by_parent
+msgid "Product line search"
+msgstr "Поиск по линейке продуктов"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product_document_rel.py:0
+#: model:ir.model.constraint,message:plm.constraint_plm_component_document_rel_relation_unique
+msgid "ProductProduct and Irattachment relation has to be unique !"
+msgstr "Связь между компонентом и документом должна быть уникальной!"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_product_product_all_pdf_latest
+msgid "Production All Level PDF Drawings"
+msgstr "Изготовление PDF-чертежей всех уровней"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_product_product_one_pdf_latest
+msgid "Production First Level PDF Drawings"
+msgstr "Производственные чертежи в формате PDF первого уровня"
+
+#. module: plm
+#: model:ir.actions.report,name:plm.report_product_product_pdf_latest
+msgid "Production PDF Drawings"
+msgstr "Производственные чертежи в формате PDF"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_template.py:0
+msgid "Products"
+msgstr "Продукция"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Project"
+msgstr "Проект"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_plm_settings
+msgid "Purchase"
+msgstr "Покупка"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.bom_structure_all
+msgid "Qty"
+msgstr "Количество"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_ir_attachment__rating_ids
+#: model:ir.model.fields,field_description:plm.field_product_template__rating_ids
+#: model:ir.model.fields,field_description:plm.field_revision_plm_mixin__rating_ids
+msgid "Ratings"
+msgstr "Рейтинги"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product.py:0
+#: model:ir.model.fields,field_description:plm.field_product_product__tmp_material
+msgid "Raw Material"
+msgstr "Сырье"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_material.py:0
+#: model:ir.model.constraint,message:plm.constraint_plm_material_name_uniq
+msgid "Raw Material has to be unique !"
+msgstr "Сырье должно быть уникальным!"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_template.py:0
+#: model:ir.model.fields,help:plm.field_product_product__engineering_material
+#: model:ir.model.fields,help:plm.field_product_template__engineering_material
+msgid "Raw material for current product, only description for titleblock."
+msgstr "Сырье для текущего продукта, только описание для основной надписи."
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Re Release"
+msgstr "Повторный релиз"
+
+#. module: plm
+#: model:ir.actions.server,name:plm.action_update_doc_type
+msgid "Recompute Doc Type"
+msgstr "Пересчитать тип документа"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_bom_form_view
+msgid "Related BOM Line"
+msgstr "Соответствующая строка спецификации"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.plm_bom_form_view
+msgid "Related BOM Revisions"
+msgstr "Сопутствующие изменения спецификации"
+
+#. module: plm
+#: model:ir.model.fields,field_description:plm.field_mrp_bom_line__related_bom_ids
+msgid "Related BOMs"
+msgstr "Связанные спецификации"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product_kanban.py:0
+msgid "Related Boms"
+msgstr "Связанные бомбы"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_backup_document.py:0
+#: code:addons/plm/models/plm_checkout.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__documentid
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__document_id
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__document_id
+#: model:ir.model.fields,field_description:plm.field_plm_checkout__documentid
+msgid "Related Document"
+msgstr "Связанный документ"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/product_product_kanban.py:0
+#: model:ir.model.fields,field_description:plm.field_mrp_bom_line__related_document_ids
+msgid "Related Documents"
+msgstr "Связанные документы"
+
+#. module: plm
+#: model_terms:ir.ui.view,arch_db:plm.view_attachment_form_plm_hinerit
+msgid "Related To"
+msgstr "Относится к"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/plm_backup_document.py:0
+#: code:addons/plm/models/plm_checkout.py:0
+#: model:ir.model.fields,field_description:plm.field_plm_backupdoc__userid
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open__userid
+#: model:ir.model.fields,field_description:plm.field_plm_cad_open_bck__userid
+#: model:ir.model.fields,field_description:plm.field_plm_checkout__userid
+msgid "Related User"
+msgstr "Связанный пользователь"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__child_id
+msgid "Related child document"
+msgstr "Сопутствующий дочерний документ"
+
+#. module: plm
+#. odoo-python
+#: code:addons/plm/models/ir_attachment_relations.py:0
+#: model:ir.model.fields,field_description:plm.field_ir_attachment_relation__parent_id
+msgid "Related parent document"
+msgstr "Связанный родительский документ"
+
+#. module: plm
+#: model:ir.model,name:plm.model_ir_att
