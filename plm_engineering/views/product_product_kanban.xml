@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_product_kanban_spare_extension" model="ir.ui.view">
+        <field name="name">prod.prod.spare.kanban.extension</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="plm.plm_component_kanban"/>
+        <field name="arch" type="xml">
+            <a name="open_normal_bom" position="after">
+                <a type="object" name="open_engine_bom">
+                    <t>Engineering Boms</t>
+                </a>
+            </a>
+        </field>
+    </record>
+</odoo>
