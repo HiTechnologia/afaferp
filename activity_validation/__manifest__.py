@@ -1,0 +1,26 @@
+{
+    "name": "HiTech AFAFERP Activity Validation",
+    "version": "18.0.1.0.5",
+    "author": "HiTechnologia",
+    "category": "Custom",
+    "sequence": 1,
+    "summary": "",
+    "depends": [
+        "mail",
+        "plm",
+    ],
+    "license": "AGPL-3",
+    "data": [
+        "security/security.xml",
+        "data/mail_activity_data.xml",
+        "views/mail_activity_type.xml",
+        "views/mail_activity.xml",
+        "views/mail_activity_children_rel.xml",
+        "report/bom_activity_product_product.xml",
+        "report/bom_activity_product_template.xml",
+    ],
+    "qweb": ["static/src/xml/*.xml"],
+    "installable": True,
+    "application": False,
+    "auto_install": False,
+}
