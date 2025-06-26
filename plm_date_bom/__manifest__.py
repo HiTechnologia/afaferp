@@ -1,0 +1,20 @@
+{
+    "name": "HiTech AFAFERP PLM Date Bom",
+    "version": "18.0.1.0.0",
+    "author": "HiTechnologia",
+    "license": "AGPL-3",
+    "category": "Manufacturing/Product Lifecycle Management (PLM)",
+    "sequence": 15,
+    "summary": "Allow to compute boms due to date",
+    "depends": ["plm"],
+    "data": [
+        "security/plm_security.xml",
+        "data/ir_cron.xml",
+        "report/bom_structure_report_extension.xml",
+        "views/mrp_bom.xml",
+        "views/mrp_production.xml",
+    ],
+    "installable": True,
+    "application": False,
+    "auto_install": False,
+}
