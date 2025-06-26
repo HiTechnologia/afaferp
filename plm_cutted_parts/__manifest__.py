@@ -1,0 +1,20 @@
+{
+    "name": "HiTech AFAFERP PLM Cutted Parts",
+    "version": "18.0.2.0.0",
+    "author": "HiTechnologia",
+    "category": "Manufacturing/Product Lifecycle Management (PLM)",
+    "sequence": 15,
+    "summary": "Manage bom explosion for cutted parts",
+    "license": "AGPL-3",
+    "depends": ["mrp", "plm"],
+    "data": [
+        "security/base_plm_security.xml",
+        "report/mrp_bom.xml",
+        "wizard/plm_temporary.xml",
+        "views/product.xml",
+        "views/mrp_bom_lines.xml",
+    ],
+    "installable": True,
+    "application": False,
+    "auto_install": False,
+}
