@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.formio.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form"/>
+        <field name="priority" eval="70"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form" position="inside">
+                <app data-string="Forms" string="Forms" name="formio" groups="formio.group_formio_admin">
+                    <block title="formio.js library (js, css) version importer" name="formio_js_library_importer">
+                        <setting>
+                            <label for="formio_versions_to_register" string="Register Versions" class="col-md-4"/>
+                            <field name="formio_versions_to_register"/>
+                            <div class="text-muted">
+                                A comma separated string (list) of formio.js versions to register.
+                                The strings must conform to the format of the release names: <a href="https://github.com/formio/formio.js/tags" target="_blank">https://github.com/formio/formio.js/tags</a>
+                                <br/><br/>
+                                Examples:
+                                <ul>
+                                    <li>v4,v5</li>
+                                    <li>v4.17,v4.18</li>
+                                </ul>
+                            </div>
+                        </setting>
+                        <setting string="Check, register and install the latest 30 available Versions">
+                            <div class="content-group">
+                                <div class="row mt16">
+                                    <div class="text-muted">
+                                        A scheduled action (daily cron) is available and already active.<br/>
+                                        Releases: <a href="https://github.com/formio/formio.js/tags" target="_blank">https://github.com/formio/formio.js/tags</a>
+                                    </div>
+                                </div>
+                                <div class="row mt16">
+                                    <label for="formio_github_personal_access_token" string="GitHub personal access token"/>
+                                    <field name="formio_github_personal_access_token" style="width: 85%;"/>
+                                    <div>
+                                        <i class="fa fa-info-circle" title="info"/>
+                                        <a href="https://github.com/settings/tokens" target="_blank"> Personal access token</a> is not required, but it can get a higher rate limit.
+                                        This prevents timeouts and authorization errors.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt16">
+                                <button name="action_formio_version_github_importer" type="object"
+                                        confirm="Are you sure to check for available versions? This could take some time to load, please be patient."
+                                        string="Check and Register available Versions" class="ml-2 btn btn-primary" icon="fa-cog"/>
+                            </div>
+                        </setting>
+                        <setting>
+                            <label for="formio_default_version_id" string="Default Version" class="col-md-4"/>
+                            <field name="formio_default_version_id"/>
+                            <div class="text-muted">
+                                When adding a new Form Builder, use this formio.js client/library version.
+                            </div>
+                        </setting>
+                    </block>
+                    <block title="Default CSS assets" name="default_css_assets">
+                        <setting string="Add additional CSS files to be included for every new installed formio.js client/library."
+                                 class="w-100">
+                            <div class="row">
+                                <field name="formio_default_asset_css_ids" class="w-100">
+                                    <list editable="bottom">
+                                        <field name="url" widget="url"/>
+                                        <field name="active"/>
+                                        <field name="nodelete"/>
+                                    </list>
+                                </field>
+                            </div>
+                        </setting>
+                    </block>
+                    <block title="Components" name="components">
+                        <setting string="Other Component settings"/>
+                    </block>
+                    <block title="Default Form Builder formio.js Options">
+                        <setting string="Select a default Form Builder JavaScript Options Template. The stored data, the Form Builder formio.js (JavaScript) Options, shall be shown in the 2nd tab: Options formio.js"
+                                 class="w-100">
+                            <notebook>
+                                <page string="Options Template">
+                                    <label for="formio_default_builder_js_options_id" string="Select Options Template" class="col-md-2"/>
+                                    <field name="formio_default_builder_js_options_id"/>
+                                </page>
+                                <page string="Options formio.js">
+                                    <!-- <div class="row mt16"> -->
+                                    <code><field name="formio_default_builder_js_options" class="w-100"/></code>
+                                    <!-- </div> -->
+                                </page>
+                            </notebook>
+                            <div class="text-muted mt16 w-100">
+                                <strong>Example below</strong>. Options could contain the Form Builder "editForm" with "file" component settings:<br/>
+                                <a href="https://github.com/formio/formio.js/blob/master/src/components/file/editForm/File.edit.file.js" target="_blank">
+                                    https://github.com/formio/formio.js/blob/master/src/components/file/editForm/File.edit.file.js
+                                </a>
+                            </div>
+                            <div>
+                                <pre style="background-color: #e9ecef;">{
+  'editForm': {
+    'file': [
+      {
+        'key': 'file',
+        'components': [
+          {'key': 'webcam', 'defaultValue': True},
+          {'key': 'storage', 'defaultValue': 'base64'}
+        ]
+      }
+    ]
+  }
+}</pre>
+                            </div>
+                        </setting>
+                    </block>
+                </app>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="action_formio_config_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'formio', 'bin_size': False}</field>
+    </record>
+
+    <menuitem name="Settings"
+              id="menu_formio_config_settings"
+              action="action_formio_config_settings"
+              parent="menu_formio_configuration"
+              groups="base.group_system"
+              sequence="10"/>
+</odoo>

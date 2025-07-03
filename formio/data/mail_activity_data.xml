@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="mail_act_formio_license_renewal_reminder" model="mail.activity.type">
+            <field name="name">Forms License - Renewal Reminder</field>
+           <field name="icon">fa-rocket</field>
+           <field name="res_model">formio.license</field>
+       </record>
+
+        <record id="mail_act_partner_linking" model="mail.activity.type">
+             <field name="name">Form linking to Partner</field>
+            <field name="icon">fa-tasks</field>
+            <field name="res_model">formio.form</field>
+        </record>
+    </data>
+</odoo>

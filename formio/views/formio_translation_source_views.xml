@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+    <record id="view_formio_translation_source_tree" model="ir.ui.view">
+        <field name="name">formio.translation.source.list</field>
+        <field name="model">formio.translation.source</field>
+        <field name="arch" type="xml">
+            <list string="Translation Sources" editable="top">
+                <field name="property"/>
+                <field name="source"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_formio_translation_source_form" model="ir.ui.view">
+        <field name="name">formio.translation.source.form</field>
+        <field name="model">formio.translation.source</field>
+        <field name="arch" type="xml">
+	    <form string="Translation Source">
+                <sheet>
+                    <group>
+                        <field name="property"/>
+                        <field name="source"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_formio_translation_source" model="ir.actions.act_window">
+        <field name="name">Translation Sources</field>
+        <field name="res_model">formio.translation.source</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_formio_translation_source_tree"/>
+    </record>
+</odoo>
