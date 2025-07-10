@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_model_form_inherit" model="ir.ui.view">
+        <field name="name">ir.model.view.form.inherit</field>
+        <field name="model">ir.model</field>
+        <field name="inherit_id" ref="base.view_model_form"/>
+        <field name="arch" type="xml">
+            <field name="transient" position="after">
+                <field name="is_approval_record" readonly="state=='base'"/>
+            </field>
+            <header>
+                <button string="Expression" name="action_show_expression_editor" type="object" class="btn-primary" icon="fa-code"/>
+                <button string="Fields" name="action_view_fields" type="object" class="btn-primary" icon="fa-wpforms"/>
+            </header>
+        </field>
+    </record>
+
+    <record id="view_model_search_inherit" model="ir.ui.view">
+        <field name="name">ir.model.view.search.inherit</field>
+        <field name="model">ir.model</field>
+        <field name="inherit_id" ref="base.view_model_search"/>
+        <field name="arch" type="xml">
+            <field name="model" position="after">
+                <filter string="Approval Record" name="is_approval_record" domain="[('is_approval_record', '=', True)]" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_approval_process_wizard" model="ir.ui.view">
+		<field name="name">approval.process.wizard.form</field>
+		<field name="model">approval.process.wizard</field>
+		<field name="arch" type="xml">
+			<form>
+				<group invisible="not confirm_message">
+					<div class="alert alert-info" role="alert">
+						<field name="confirm_message" nolabel="1" readonly="1" />
+					</div>
+				</group>
+				<group>
+					<field name="return_state" 
+						string="Status" 
+						invisible="action_type != 'return' or fixed_return_state" 
+						required="action_type == 'return' and not fixed_return_state" 
+						widget="selection_dynamic" 
+						options="{'selection_model' : 'res_model', 'selection_field' : 'state', 'visible_selections' : 'visible_selections'}" />
+					<field name="transfer_state" 
+						string="Status" 
+						invisible="action_type != 'transfer'" 
+						required="action_type == 'transfer'" 
+						widget="selection_dynamic" 
+						options="{'selection_model' : 'res_model', 'selection_field' : 'state'}" />
+					<field name="forward_user_id" widget="many2one_avatar_user" domain="[('groups_id','=', %(base.group_user)d)]" invisible="action_type != 'forward'" required="action_type == 'forward'" />
+					<field name="comment" required="comment_required" />
+					<field name="comment_required" invisible="1" />
+					<field name="button_id" invisible="1" />
+					<field name="fixed_return_state" invisible="1" />
+					<field name="action_type" invisible="1" />
+					<field name="res_model" invisible="1" />
+					<field name="res_ids" invisible="1" />
+					<field name="visible_selections" invisible="1" />
+				</group>
+				<footer>
+					<button string="Confirm" name="process" type="object" class="btn-primary" icon="fa-check" />
+					<button string="Cancel" class="btn-secondary" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+
+</odoo>

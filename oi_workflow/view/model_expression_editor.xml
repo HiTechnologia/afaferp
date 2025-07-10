@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_model_expression_editor_form" model="ir.ui.view">
+		<field name="name">model.expression.editor.form</field>
+		<field name="model">model.expression.editor</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<field name="model" readonly="1" />
+					<field name="domain" widget="domain" options="{'model' : 'model'}" />
+					<field name="code" widget="ace" options="{'mode' : 'python'}" />
+				</group>				
+				<footer>
+					<button string="OK" class="btn-primary" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+</odoo>

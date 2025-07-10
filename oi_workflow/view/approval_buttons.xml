@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_approval_buttons_list" model="ir.ui.view">
+        <field name="name">approval.buttons.view.list</field>
+        <field name="model">approval.buttons</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="not active" open_form_view="1">
+                <field name="sequence" widget="handle" />
+                <field name="id" optional="hide" groups="base.group_no_one" />
+                <field name="xml_id" optional="hide" groups="base.group_no_one" />
+                <field name="model_id" column_invisible="context.get('hide_model')" />
+                <field name="name" />
+                <field name="config_id" readonly="1" optional="show" />
+                <field name="states" widget="selection_tags" options="{'selection_model' : 'model', 'selection_field' : 'state'}" />
+                <field name="action_type" optional="show" />
+                <field name="visible_to" optional="hide" />
+                <field name="invisible" optional="show" />
+                <field name="context" optional="hide" />
+                <field name="run_as_superuser" optional="hide" />
+                <field name="validate_form" optional="hide" />
+                <field name="email_template_id" optional="hide" invisible="action_type !='email'" domain="[('model_id','=', model_id)]" context="{'default_model_id' : model_id}" />
+                <field name="email_next_action" optional="hide" invisible="action_type !='email'" />
+                <field name="server_action_id" optional="hide" invisible="action_type !='action' and email_next_action !='action'" />
+                <field name="return_state" optional="hide" invisible="action_type !='return' and email_next_action!='return'" widget="selection_dynamic" options="{'selection_model' : 'model', 'selection_field' : 'state'}" />
+                <field name="group_ids" widget="many2many_tags" optional="show" domain="[('category_id','!=', %(base.module_category_hidden)d)]"/>
+                <field name="button_class" optional="hide" />
+                <field name="icon" optional="hide" />
+                <field name="confirm_message" optional="hide" />
+                <field name="comment" optional="hide" />
+                <field name="active" optional="show" widget="boolean_toggle" options="{'autosave' : False}" />
+                <field name="voting_type" optional="show" />
+                <field name="model" column_invisible="1" />
+                <field name="settings_id" column_invisible="1" />
+                <field name="model" column_invisible="1" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_approval_buttons_list_approval_config" model="ir.ui.view">
+        <field name="name">approval.buttons.view.list.approval.config</field>
+        <field name="model">approval.buttons</field>
+        <field name="inherit_id" ref="view_approval_buttons_list" />
+        <field name="priority">100</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <field name="config_id" position="replace" />
+            <field name="model_id" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </field>
+            <field name="states" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_approval_buttons_list_approval_settings" model="ir.ui.view">
+        <field name="name">approval.buttons.view.list.approval.settings</field>
+        <field name="model">approval.buttons</field>
+        <field name="inherit_id" ref="view_approval_buttons_list" />
+        <field name="priority">100</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <field name="model_id" position="attributes">
+                <attribute name="column_invisible">1</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_approval_buttons_form" model="ir.ui.view">
+        <field name="name">approval.buttons.view.form</field>
+        <field name="model">approval.buttons</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <widget name="web_ribbon" text="Archived" bg_color="bg-danger" invisible="active" />
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="action_type" />
+                            <field name="run_as_superuser" widget="boolean_toggle" options="{'autosave' : False}" />
+                            <field name="visible_to" />
+                            <field name="model" invisible="1" />
+                            <field name="settings_id" invisible="1" />
+                            <field name="model_id" invisible="1" />
+                            <field name="config_id" readonly="1" />
+                            <field name="states" invisible="visible_to == 'domain'" readonly="config_id" widget="selection_tags" options="{'selection_model' : 'model', 'selection_field' : 'state'}" />                            
+                        </group>
+                        <group>
+                            <field name="active" widget="boolean_toggle" options="{'autosave' : False}" />
+                            <field name="xml_id" invisible="not xml_id" groups="base.group_no_one" />
+                            <field name="email_template_id" invisible="action_type !='email'" required="action_type == 'email'" domain="[('model_id','=', model_id)]" context="{'default_model_id' : model_id}" />
+                            <field name="email_wizard_form_id" invisible="action_type !='email'" />
+                            <field name="email_next_action" invisible="action_type !='email'" />
+                            <field name="server_action_id" invisible="action_type !='action' and email_next_action !='action'" required="action_type == 'action'" domain="[('model_id','=', model_id)]" context="{'default_model_id' : model_id,'default_state' : 'code'}" />
+                            <field name="method" invisible="action_type !='method'" />
+                            <field name="return_state" invisible="action_type !='return' and email_next_action !='return'" widget="selection_dynamic" options="{'selection_model' : 'model', 'selection_field' : 'state'}" />
+                            <field name="button_class" />
+                            <field name="icon" />
+                            <field name="comment" />
+                            <field name="hotkey" />
+                            <field name="is_voting" invisible="1" />
+                            <field name="voting_type" invisible="not is_voting" />
+                        </group>
+                        <group>
+                            <field name="group_ids" widget="many2many_tags" domain="[('category_id','!=', %(base.module_category_hidden)d)]"/>
+                            <field name="invisible" />                                                    
+                        </group>
+                        <group>
+                            <field name="validate_form" widget="boolean_toggle" options="{'autosave' : False}" />
+                            <field name="confirm_message" />
+                            <field name="context" />                        
+                        </group>
+                        <group string="Visible Filter" invisible="visible_to !='domain'">
+                            <field name="visible_domain" widget="domain" options="{'model' : 'model', 'in_dialog' : True}" nolabel="1" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_approval_buttons_form_approval_config" model="ir.ui.view">
+        <field name="name">approval.buttons.view.form.approval.config</field>
+        <field name="model">approval.buttons</field>
+        <field name="priority">100</field>
+        <field name="mode">primary</field>
+        <field name="inherit_id" ref="view_approval_buttons_form" />
+        <field name="arch" type="xml">
+            <field name="config_id" position="replace" />
+            <field name="states" position="replace" />
+            <form position="inside">
+                <field name="settings_id" invisible="1" />
+            </form>
+        </field>
+    </record>
+
+    <record id="view_approval_buttons_search" model="ir.ui.view">
+        <field name="name">approval.buttons.view.search</field>
+        <field name="model">approval.buttons</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name" />
+                <field name="action_type" />
+                <separator />
+                <filter name="filter_config_id_not_set" string="Approval Status not set" domain="[('config_id', '=', False)]" />
+                <filter name="filter_config_id_set" string="Approval Status set" domain="[('config_id', '!=', False)]" />
+                <group>
+                    <filter name="group_action_type" string="Action Type" context="{'group_by': 'action_type'}" />
+                    <filter name="group_config_id" string="Approval Status" context="{'group_by': 'config_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+</odoo>

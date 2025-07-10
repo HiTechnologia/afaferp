@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <template id="vote_summary_table">
+            <br />
+            <h3>Voting Summary</h3>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th>Vote Option</th>
+                        <th>Count</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <t t-foreach="summary_data" t-as="vote_option">
+                        <tr>
+                            <td>
+                                <t t-esc="vote_option" />
+                            </td>
+                            <td>
+                                <t t-esc="summary_data[vote_option]" />
+                            </td>
+                        </tr>
+                    </t>
+                </tbody>
+            </table>
+            <br />
+        </template>
+    </data>
+</odoo>

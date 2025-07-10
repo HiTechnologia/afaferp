@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_approval_log_list" model="ir.ui.view">
+        <field name="name">approval.log.view.list</field>
+        <field name="model">approval.log</field>
+        <field name="arch" type="xml">
+            <list create="0" delete="0" edit="0">
+                <field name="id" optional="hide" />
+                <field name="model_id" column_invisible="context.get('hide_model')"/>
+                <field name="record_id" column_invisible="context.get('hide_record')"/>
+                <field name="date" />
+                <field name="user_id" widget="many2one_avatar_user" />
+                <field name="old_status" />
+                <field name="old_state" optional="hide" groups="base.group_system"/>
+                <field name="new_status" />
+                <field name="new_state" optional="hide" groups="base.group_system"/>
+                <field name="duration" optional="show"/>
+                <field name="duration_hours" optional="hide" widget="float_time" options="{'displaySeconds' : True}" sum="Total Hours"/>
+                <field name="duration_hours_avg" optional="hide" widget="float_time" options="{'displaySeconds' : True}" avg="Average Hours"/>
+                <field name="description" optional="hide"/>
+                <field name="approval_button_id" optional="hide" groups="base.group_system" />
+                <field name="bulk_approval" optional="hide" groups="base.group_system"/>
+                <field name="model" column_invisible="1" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_approval_log_search" model="ir.ui.view">
+        <field name="name">approval.log.view.search</field>
+        <field name="model">approval.log</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="model_id" invisible="context.get('hide_model')" />
+                <field name="record_id" />
+                <field name="user_id" />
+                <field name="date" />
+                <field name="old_status" />
+                <field name="new_status" />
+                <field name="description"/>
+                <separator />
+                <filter name="filter_button" string="With Button" domain="[('approval_button_id', '!=', False)]" />
+                <filter name="filter_no_button" string="Without Button" domain="[('approval_button_id', '=', False)]" />
+                <group>
+                    <filter name="group_model_id" string="Object" context="{'group_by': 'model_id'}" invisible="context.get('hide_model')"/>
+                    <filter name="group_user" string="User" context="{'group_by': 'user_id'}" />
+                    <filter name="group_date" string="Date" context="{'group_by': 'date'}" />
+                    <filter name="group_old_status" string="Old Status" context="{'group_by': 'old_state'}" />
+                    <filter name="group_new_status" string="New Status" context="{'group_by': 'new_state'}" />
+                    <filter name="group_approval_button_id" string="Button" context="{'group_by': 'approval_button_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_approval_log_pivot" model="ir.ui.view">
+        <field name="name">approval.log.view.pivot</field>
+        <field name="model">approval.log</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="duration_hours" type="measure" widget="float_time" string="Total Hours" operator="sum" />
+                <field name="duration_hours_avg" type="measure" widget="float_time" string="Average Hours" operator="avg"/>
+            </pivot>
+        </field>
+    </record>
+
+</odoo>

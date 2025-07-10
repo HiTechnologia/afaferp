@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+	<record id="approval_settings_cancellation_record" model="approval.settings" forcecreate="False">
+		<field name="model_id" ref="model_cancellation_record" />
+		<field name="sequence">999</field>
+	</record>    
+
+</odoo>

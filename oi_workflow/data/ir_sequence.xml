@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="seq_cancellation_record_form" model="ir.sequence" >
+		<field name="name">cancellation record</field>
+		<field name="code">cancellation.record</field>
+		<field name="padding">4</field>
+		<field name="prefix"></field>
+		<field name="company_id" eval="False" />
+	</record>
+
+</odoo>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<menuitem id="menu_workflow_root" name="Workflow" parent="base.menu_administration" sequence="10" />
+
+	<menuitem id="menu_approval_settings" action="act_approval_settings" parent="menu_workflow_root" sequence="10" />
+
+	<menuitem id="menu_approval_config" action="act_approval_config" parent="menu_workflow_root" sequence="20" />
+
+	<menuitem id="menu_approval_buttons" action="act_approval_buttons" parent="menu_workflow_root" sequence="30" />
+
+	<menuitem id="menu_approval_automation" action="act_approval_automation" parent="menu_workflow_root" sequence="40" />
+
+	<menuitem id="menu_approval_log" action="act_approval_log" parent="menu_workflow_root" sequence="60" />
+		
+</odoo>

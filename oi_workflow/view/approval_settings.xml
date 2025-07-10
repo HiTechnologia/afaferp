@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_approval_settings_form" model="ir.ui.view">
+		<field name="name">approval.settings.form</field>
+		<field name="model">approval.settings</field>
+		<field name="arch" type="xml">
+			<form create="false">
+				<header>
+					
+				</header>
+				<sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="action_view_approval" type="object" class="oe_stat_button" icon="fa-check">
+							<field name="approval_count" string="Approval Status" widget="statinfo" />
+						</button>			
+						<button name="action_view_automation" type="object" class="oe_stat_button" icon="fa-code">
+							<field name="automation_count" string="Automation" widget="statinfo" />
+						</button>				
+						<button name="action_view_buttons" type="object" class="oe_stat_button" icon="fa-cog">
+							<field name="button_count" string="Buttons" widget="statinfo" />
+						</button>				
+					</div>						
+					<group>
+						<group>
+							<field name="model_id" readonly="1" />							
+							<label for="static_states" />
+							<div>
+								<field name="static_states" />
+								<button name="reset_states" invisible="not static_states" class="btn-link" title="Reset Static Statuses" string="Reset" type="object" confirm="Reset Static Statuses?" icon="fa-refresh" />
+							</div>
+						</group>
+						<group>
+							<field name="model" />
+							<field name="xml_id" invisible="not xml_id" groups="base.group_no_one" />							
+						</group>
+						<group string="Status Bar">
+							<field name="show_status_duration_tracking" string="Duration Tracking" />
+							<field name="dynamic_statusbar_visible" string="Dynamic Status" />					
+						</group>
+						<group string="List View">
+							<field name="show_action_approve_all" string="Approval All Action" />
+							<field name="approval_all_groups" widget="many2many_tags" domain="[('category_id','!=', %(base.module_category_hidden)d)]" invisible="not show_action_approve_all" />
+						</group>
+					</group>
+					<notebook>
+						<page string="Static Statuses" invisible="not static_states">
+							<group>
+								<field name="state_ids" nolabel="1" colspan="2">
+									<list editable="bottom" decoration-muted="not active">
+										<field name="sequence" widget="handle" />
+										<field name="state" />
+										<field name="name" />
+										<field name="type" />
+										<field name="reject_state" />
+										<field name="active" widget="boolean_toggle" />
+									</list>
+								</field>
+							</group>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+
+	<record id="view_approval_settings_list" model="ir.ui.view">
+		<field name="name">approval.settings.list</field>
+		<field name="model">approval.settings</field>
+		<field name="arch" type="xml">
+			<list create="false">
+				<field name="sequence" widget="handle" />
+				<field name="id" optional="hide" groups="base.group_no_one" />
+				<field name="xml_id" optional="hide" groups="base.group_no_one" />
+				<field name="model" />
+				<field name="model_id" />				
+			</list>
+		</field>
+	</record>
+
+	<record id="view_approval_settings_search" model="ir.ui.view">
+		<field name="name">approval.settings.search</field>
+		<field name="model">approval.settings</field>
+		<field name="arch" type="xml">
+			<search>
+				<field name="model_id" />
+			</search>
+		</field>
+	</record>
+
+
+</odoo>

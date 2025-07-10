@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+  
+    <t t-inherit="views.ViewButtonTooltip" t-inherit-mode="extension">
+        <xpath expr="//ul" position="inside">
+            <li t-if="button_type === 'object' and button.args" data-item="button_args">
+                <span class="o-tooltip--technical--title">args:</span>
+                <t t-out="button.args"/>
+            </li>            
+            <li t-if="button.validate_form" data-item="button_validate_form">
+                <span class="o-tooltip--technical--title">validate_form:</span>
+                <t t-out="button.validate_form"/>
+            </li>            
+        </xpath>
+    </t>
+
+</templates>

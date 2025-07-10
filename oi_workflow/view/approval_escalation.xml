@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_approval_escalation_form" model="ir.ui.view">
+		<field name="name">Approval Escalation</field>
+		<field name="model">approval.escalation</field>
+		<field name="mode">primary</field>
+		<field name="inherit_id" ref="base_automation.view_base_automation_form" />
+		<field name="arch" type="xml">
+			<data>
+				<xpath expr="//group[@groups='!base.group_no_one']//field[@name='model_id']" position="attributes">
+					<attribute name="readonly">1</attribute>
+				</xpath>
+				<xpath expr="//group[@groups='base.group_no_one']//field[@name='model_id']" position="attributes">
+					<attribute name="readonly">1</attribute>
+				</xpath>
+				<field name="trigger" position="attributes">
+					<attribute name="readonly">1</attribute>
+				</field>
+				<field name="trg_date_id" context="{'hide_model': 1}" position="attributes">
+					<attribute name="readonly">1</attribute>
+				</field>
+				<xpath expr="//div/div/field[@name='trg_date_id']" position="attributes">
+					<attribute name="readonly">1</attribute>
+				</xpath>
+				<xpath expr="//group/div/field[@name='trg_date_id']" position="attributes">
+					<attribute name="readonly">1</attribute>
+				</xpath>
+				<field name="filter_domain" position="attributes">
+					<attribute name="readonly">1</attribute>
+				</field>				
+				<field name="trg_date_range" position="attributes">
+					<attribute name="string">Delay Duration</attribute>
+				</field>				
+				<button name="action_view_webhook_logs" position="replace" />
+				<button name="action_rotate_webhook_uuid" position="replace" />
+			</data>
+		</field>
+	</record>
+
+	<!-- automation Tree View -->
+	<record id="view_approval_escalation_list" model="ir.ui.view">
+		<field name="name">approval.escalation.list</field>
+		<field name="model">approval.escalation</field>
+		<field name="arch" type="xml">
+			<list string="Approval Escalation" decoration-muted="not active">
+				<field name="sequence" widget="handle"/>
+				<field name="name" />
+				<field name="trg_date_range" string="Delay Duration" />
+				<field name="trg_date_range_type" />
+				<field name="active" widget="boolean_toggle" />
+			</list>
+		</field>
+	</record>
+
+</odoo>

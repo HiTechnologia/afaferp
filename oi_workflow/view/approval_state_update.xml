@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<record id="view_approval_state_update_form" model="ir.ui.view">
+		<field name="name">approval.state.update.form</field>
+		<field name="model">approval.state.update</field>
+		<field name="arch" type="xml">
+			<form>
+				<group>
+					<field name="state" widget="selection_dynamic" selection_model="res_model" selection_field="'state'" />
+					<field name="res_model" invisible="1"  />
+					<field name="res_ids" invisible="1" />
+					<field name="comment" />
+				</group>				
+				<footer>
+					<button string="Update" name="action_update" type="object" class="btn-primary" />
+					<button string="Cancel" class="btn-default" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+
+</odoo>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_approval_automation_list" model="ir.ui.view">
+        <field name="name">approval.automation.view.list</field>
+        <field name="model">approval.automation</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle" />
+                <field name="id" optional="hide" groups="base.group_no_one" />
+                <field name="xml_id" optional="hide" groups="base.group_no_one" />                
+                <field name="model_id" column_invisible="context.get('hide_model')" />
+                <field name="name" />
+                <field name="trigger" />
+                <field name="from_states" widget="selection_tags" options="{'selection_model' : 'model', 'selection_field' : 'state'}"/>
+                <field name="to_states" widget="selection_tags" options="{'selection_model' : 'model', 'selection_field' : 'state'}"/>
+                <field name="active"  optional="show" widget="boolean_toggle" /> 
+                <field name="model" column_invisible="1" />               
+                <field name="settings_id" column_invisible="1" />               
+            </list>
+        </field>
+    </record>
+
+    <record id="view_approval_automation_form" model="ir.ui.view">
+        <field name="name">approval.automation.view.form</field>
+        <field name="model">approval.automation</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+					<div class="oe_button_box" name="button_box">
+						<button name="action_view_template" type="object" class="oe_stat_button" icon="fa-send" string="Mail Templates">
+						</button>					
+						<button name="action_show_expression_editor" type="object" class="oe_stat_button" icon="fa-code" string="Expression">
+							
+						</button>									
+					</div>
+					<widget name="web_ribbon" text="Archived" bg_color="bg-danger" invisible="active" />
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="trigger" />                        
+                            <field name="model" invisible="1" />               
+                            <field name="settings_id" invisible="1" />               
+                            <field name="model_id" invisible="1" />       
+                            <field name="from_states" invisible="trigger == 'on_create'" widget="selection_tags" options="{'selection_model' : 'model', 'selection_field' : 'state'}"/>
+                            <field name="to_states" widget="selection_tags" options="{'selection_model' : 'model', 'selection_field' : 'state'}"/>
+                            <field name="filter_domain" widget="domain" options="{'model': 'model', 'in_dialog' : True}" />
+                        </group>
+                        <group>
+                            <field name="active" widget="boolean_toggle" />
+                            <field name="xml_id" invisible="not xml_id" groups="base.group_no_one" />
+                            <field name="template_ids" widget="many2many_tags" domain="[('model_id','=', model_id)]" context="{'default_model_id' : model_id, 'approval_automation_trigger' : trigger}" />
+                            <field name="server_action_ids" domain="[('model_id','=', model_id)]" context="{'default_model_id' : model_id}" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                    <group name="code" string="Python Code">
+                        <field name="code" nolabel="1" widget="ace" options="{'mode' : 'python'}" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>
