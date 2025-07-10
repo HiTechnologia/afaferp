@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+    <record id="view_formio_license_tree" model="ir.ui.view">
+        <field name="name">formio.license.list</field>
+        <field name="model">formio.license</field>
+        <field name="arch" type="xml">
+            <list string="License">
+                <field name="uuid"/>
+                <field name="display_name"/>
+                <field name="key" optional="hide"/>
+                <field name="domains" optional="show"/>
+                <field name="valid_until_date" optional="show"/>
+                <field name="activity_ids" widget="list_activity" optional="show"/>
+                 <field name="message_needaction" column_invisible="True"/>
+                <field name="renewal_reminder_weeks" optional="hide"/>
+                <field name="renewal_reminder_user_ids" widget="many2many_tags" optional="hide"/>
+                <field name="active"/>
+                <field name="create_date" optional="hide"/>
+                <field name="write_date" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_formio_license_form" model="ir.ui.view">
+        <field name="name">formio.license.form</field>
+        <field name="model">formio.license</field>
+        <field name="arch" type="xml">
+	    <form string="Form">
+                <header>
+                    <button
+                        string="Generate Automatic Renewal Reminders"
+                        name="generate_renewal_reminder_activities"
+                        type="object"
+                        invisible="id == False or valid_until_date == False or generate_renewal_reminders_state != 'generate'"
+                        class="btn-primary"/>
+                    <button
+                        string="Regenerate Automatic Renewal Reminders"
+                        name="generate_renewal_reminder_activities"
+                        type="object"
+                        invisible="valid_until_date == False or generate_renewal_reminders_state != 'regenerate'"
+                        confirm="Are you sure you want to clear and regenerate the automatic renewal reminders?"
+                        class="btn-primary"/>
+                </header>
+                <sheet>
+                    <label for="display_name" class="oe_edit_only"/>
+                    <h1><field name="display_name"/></h1>
+                    <div class="mb16">
+                        <a class="btn btn-primary" href="https://www.novaforms.app/pricing" target="_blank" role="button"><i class="fa fa-globe"/> More licensing information</a>
+                    </div>
+                    <group>
+                        <group colspan="2">
+                            <field name="key"/>
+                        </group>
+                        <group string="License Params" name="license_params">
+                            <field name="uuid"/>
+                            <field name="valid_until_date"/>
+                            <field name="domains"/>
+                        </group>
+                        <group string="Metadata" name="metadata">
+                            <field name="active" readonly="True"/>
+                            <field name="create_date"/>
+                            <field name="write_date"/>
+                            <field name="generate_renewal_reminders_state" invisible="True"/>
+                        </group>
+                        <group string="Renewal Reminder Settings" name="license_renewal_reminder_settings">
+                            <field name="renewal_reminder_weeks"/>
+                            <field name="renewal_reminder_user_ids" widget="many2many_tags"/>
+                        </group>
+                        <div class="text-muted" colspan="2">
+                            <i class="fa fa-info-circle" title="info"/> It's recommended to request a renewal in a timely manner.<br/>
+                            <i class="fa fa-info-circle" title="info"/> A daily scheduled action (cron) ensures user notifications are sent for renewal activities that have passed the due date.
+                        </div>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_formio_license_search" model="ir.ui.view">
+        <field name="name">formio.license.search</field>
+        <field name="model">formio.license</field>
+        <field name="arch" type="xml">
+            <search string="Forms Licenses">
+                <field name="domains"/>
+                <field name="valid_until_date"/>
+                <field name="key"/>
+                <separator/>
+                <filter string="Archived" name="not_active"
+                        domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_formio_license" model="ir.actions.act_window">
+        <field name="name">Licenses</field>
+        <field name="res_model">formio.license</field>
+        <field name="context">{'active_test': False}</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_formio_license_tree"/>
+    </record>
+</odoo>

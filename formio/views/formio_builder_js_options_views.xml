@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<odoo>
+    <record id="view_formio_builder_js_options_tree" model="ir.ui.view">
+        <field name="name">formio.builder.js.options.list</field>
+        <field name="model">formio.builder.js.options</field>
+        <field name="arch" type="xml">
+            <list string="Form Builder formio.js Options">
+                <field name="name"/>
+                <field name="value" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_formio_builder_js_options_form" model="ir.ui.view">
+        <field name="name">formio.builder.js.options.form</field>
+        <field name="model">formio.builder.js.options</field>
+        <field name="arch" type="xml">
+	    <form string="Form Builder formio.js Options">
+                <header>
+                    <button
+                        name="%(action_open_merge_wizard)d" type="action" string="Merge formio.js Options"
+                        context="{'default_formio_js_options_current_id': id}"/>
+                </header>
+                <sheet>
+                    <div class="oe_title mb24">
+                        <h1>
+                            <field name="name"
+                                   class="text-break"
+                                   placeholder="Insert a meaningful name here"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="value" widget="ace" options="{'mode': 'js'}"/>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_formio_builder_js_options" model="ir.actions.act_window">
+        <field name="name">Form Builder formio.js Options</field>
+        <field name="res_model">formio.builder.js.options</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="view_formio_builder_js_options_tree"/>
+    </record>
+</odoo>
