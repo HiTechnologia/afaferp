@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+    <t t-name="oi_web_selection_tags.SelectionTagsField" owl="1">
+        <div
+            class="o_field_tags d-inline-flex flex-wrap"
+            t-att-class="{'o_tags_input o_input': !props.readonly}"
+        >
+            <TagsList tags="tags"/>
+            <div t-if="!props.readonly" class="d-inline-flex w-100">
+	            <select class="o_input" t-on-change="onChange" t-att-id="props.id">
+	                <option
+	                    t-att-value="stringify(false)"
+	                    t-esc="this.props.placeholder || ''"
+	                />	            
+	                <t t-foreach="options" t-as="option" t-key="option[0]">
+	                    <option
+	                        t-att-value="stringify(option[0])"
+	                        t-esc="option[1]"
+	                    />
+	                </t>
+	            </select>
+            </div>
+        </div>
+    </t>
+
+</templates>
