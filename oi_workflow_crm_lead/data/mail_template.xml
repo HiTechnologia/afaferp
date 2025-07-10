@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="mail_template_crm_lead_approval_notification" model="mail.template" forcecreate="False">
+        <field name="model_id" ref="model_crm_lead"  />
+        <field name="_approval_automation_trigger">on_enter_approval</field>
+    </record>
+
+    <record id="mail_template_crm_lead_reject_notification" model="mail.template" forcecreate="False">
+        <field name="model_id" ref="model_crm_lead"  />
+        <field name="_approval_automation_trigger">on_reject</field>
+    </record>
+
+</odoo>

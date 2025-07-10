@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="button_approval_draft_confirm" model="approval.buttons" forcecreate="False">
+        <field name="name">Confirm</field>
+        <field name="states" eval="['draft']" />
+        <field name="settings_id" ref="approval_settings_crm_lead" />
+        <field name="action_type">approve</field>
+        <field name="button_class">btn-primary</field>
+        <field name="invisible">state not in ['draft'] or not active</field>
+    </record>
+
+</odoo>

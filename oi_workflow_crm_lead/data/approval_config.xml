@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+	<record id="approval_settings_crm_lead" model="approval.settings">
+		<field name="model_id" ref="model_crm_lead" />
+	</record>
+	
+</odoo>

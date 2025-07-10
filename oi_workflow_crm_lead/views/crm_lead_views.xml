@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="crm_lead_view_form_workflow" model="ir.ui.view">
+		<field name="name">crm.lead.form.workflow</field>
+		<field name="model">crm.lead</field>
+		<field name="inherit_id" ref="crm.crm_lead_view_form" />
+		<field name="priority">100</field>
+		<field name="arch" type="xml">
+			<header position="inside">
+				<field name="user_can_approve" invisible="1" />
+				<field name="state" widget="statusbar" />
+			</header>
+			<field name="stage_id" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</field>
+			<button name="action_set_won_rainbowman" position="attributes">
+				<attribute name="invisible">1</attribute>
+			</button>
+			<button name="%(crm.crm_lead_lost_action)d" position="attributes">
+				<attribute name="invisible" separator=" or " add="state in ['won']"></attribute>
+			</button>
+		</field>
+	</record>
+
+
+	<record id="crm_lead_kanban_lead_workflow" model="ir.ui.view">
+		<field name="name">crm.lead.kanban.lead.workflow</field>
+		<field name="model">crm.lead</field>
+		<field name="inherit_id" ref="crm.crm_case_kanban_view_leads" />
+		<field name="priority">100</field>
+		<field name="arch" type="xml">
+			<field name="stage_id" position="attributes">
+				<attribute name="readonly">1</attribute>
+			</field>
+			<kanban position="attributes">
+				<attribute name="group_create">0</attribute>
+				<attribute name="group_delete">0</attribute>
+				<attribute name="groups_draggable">0</attribute>
+				<attribute name="records_draggable">0</attribute>
+				<attribute name="quick_create">0</attribute>
+			</kanban>
+		</field>
+	</record>
+</odoo>

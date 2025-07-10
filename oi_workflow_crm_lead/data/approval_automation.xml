@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="approval_auto_approval_notification" model="approval.automation" forcecreate="False">
+        <field name="name">Approval Notification</field>
+        <field name="settings_id" ref="approval_settings_crm_lead" />
+        <field name="template_ids" eval="[(4, ref('mail_template_crm_lead_approval_notification'))]" />
+        <field name="trigger">on_enter_approval</field>
+    </record>
+
+    <record id="approval_auto_reject_notification" model="approval.automation" forcecreate="False">
+        <field name="name">Reject Notification</field>
+        <field name="settings_id" ref="approval_settings_crm_lead" />
+        <field name="template_ids" eval="[(4, ref('mail_template_crm_lead_reject_notification'))]" />
+        <field name="trigger">on_reject</field>
+    </record>
+
+</odoo>
