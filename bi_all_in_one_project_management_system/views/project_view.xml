@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record model="ir.ui.view" id="view_project_sub_project">
+            <field name="name">Project Inherited For Sub Project</field>
+            <field name="model">project.project</field>
+            <field name="inherit_id" ref="project.edit_project"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                    <button name="%(bi_all_in_one_project_management_system.action_sub_projects)d"
+                            class="oe_stat_button"
+                            icon="fa-list-ul"
+                            type="action">
+                        <field string="Sub Projects" name="sub_task_count" widget="statinfo"/>
+                    </button>
+                </xpath>
+                <xpath expr="//field[@name='label_tasks']" position="after">
+                    <group><field name="type_ids" widget="many2many_tags" /></group>
+                </xpath>
+                <xpath expr="//page[@name='settings']" position="after">
+                    <page string='Sub Projects' name="sub_project">
+                        <field name="sub_project_ids">
+                            <list editable="bottom">
+                                <field name="project_id" invisible="1"/>
+                                <field name="p_project_id" force_save="1"/>
+                                <field name="partner_id"/>
+                                <field name="user_id"/>
+                            </list>
+                            <form string="Sub Project">
+                                <sheet>
+                                    <group>
+                                        <field name="project_id" invisible="1"/>
+                                        <field name="p_project_id" force_save="1"/>
+                                        <field name="partner_id"/>
+                                        <field name="user_id"/>
+                                    </group>
+                                </sheet>
+                            </form>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

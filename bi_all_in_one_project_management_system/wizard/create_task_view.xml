@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+    <record model="ir.ui.view" id="task_create_form">
+            <field name="name">sale.task.create.form</field>
+            <field name="model">sale.task.create</field>
+            <field name="arch" type="xml">
+                <form string="Add a Task">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="order_true" invisible="1"/>
+                                <field name="product_id" invisible="1"/>
+                                <field name="order_id" invisible="1"/>
+                                <field name="name" required="1"/>
+                                <field name="user_ids"  required="1" widget="many2many_avatar_user"/>
+                                <field name="date"  required="1"/>
+                                <field name="project_id"  required="1"/>
+                            </group>
+                            
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="add_a_task" string="Save &amp; Close" type="object" class="btn btn-primary"/>
+                        <button name="save_nd_edit" string="Save &amp; Edit" type="object" class="btn btn-primary" style="float:center;"/>
+                        <button name="save_nd_new" string="Save &amp; New" type="object" class="btn btn-primary" style="float:right;"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_task_create_create" model="ir.actions.act_window">
+            <field name="name">Add a Task</field>
+            <field name="res_model">sale.task.create</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

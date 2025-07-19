@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+
+     <t t-name="bi_all_in_one_project_management_system.timer" owl="1">
+       <div>
+           <span class="timer_selector"/>
+       </div>
+    </t>
+
+</templates>
+

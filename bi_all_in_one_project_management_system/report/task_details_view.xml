@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="task_details">
+	<t t-call="web.external_layout">
+		<div class="page">
+			<br/>
+			<t t-foreach="docs" t-as="o">
+                
+               		<center>
+                    	<h2><span t-field="o.name" /></h2>
+                	</center>
+
+                <table style="border-collapse: collapse;width: 100%;border: 1px solid #000;" class="table table-condensed">
+                    <tr style="padding: 8px;text-align: left;border: 3px solid #000;height:50%;">
+                        <td><strong >Project: </strong> </td>
+                        <td><span t-field="o.project_id.name"/></td>
+                        <td></td>    
+                        <td><strong >Assigned to: </strong> </td>
+                        <td><t t-foreach="o.user_ids" t-as="user"><span t-field="user.name"/><span>,</span></t></td>
+                    </tr>
+
+                    <tr style="padding: 8px;text-align: left;border: 3px solid #000;height:0%;">
+                    	<td><strong >Partner: </strong> </td>
+                        <td><span t-field="o.partner_id" /></td>
+                        <td></td>
+                        <td><strong >Assigning Date: </strong> </td>
+                        <td><span t-field="o.date_assign" /></td>    
+                    </tr>
+                    <tr style="padding: 8px;text-align: left;border: 3px solid #000;height:50%;"> 
+                        <td><strong >Partner email: </strong> </td>
+                        <td><span t-field="o.partner_id.email" /></td>
+                        <td></td>
+                        <td><strong >Deadline: </strong> </td>
+                        <td><span t-field="o.date_deadline" /></td>    
+                    </tr>
+                    
+                </table>
+
+                	<h2 style="text-align : center;font-style:normal;">
+                           Timesheet
+                    </h2><br/>
+
+                	<table style="border-collapse: collapse;width: 100%;border: 3px solid #000;" class="table table-condensed">
+                        <tr style="padding: 8px;text-align: left;border: 3px solid #000;height:50%;">
+                            <td><strong >Allocated Hours : </strong> </td>
+                            <td><span t-field="o.allocated_hours"/></td>
+
+                            <td><strong >Progress: </strong> </td>
+                            <td><span t-field="o.progress" /></td>
+                        </tr>
+                            <tr >
+                                <td><strong >Date</strong> </td>
+                                <td><strong >Employee</strong> </td>
+                                <td><strong >Description</strong> </td>
+                                <td><strong >Duration (Hours)</strong> </td>
+                               </tr>
+
+                             <t t-foreach="o.timesheet_ids" t-as="a">
+                             <tr > 
+                                <td><span t-field="a.date" /></td>
+                                <td><span t-field="a.employee_id" /></td>
+                                <td><span t-field="a.name" /></td>
+                                <td><span t-field="a.unit_amount" /></td>
+                            </tr>
+                            </t>
+                        </table>
+
+                        <div class="text-right">
+                            <tr>
+                            	<th><strong>Hours Spent :</strong></th>
+                            	<td>
+                                <span t-field="o.effective_hours" />
+                            	</td>
+                        	</tr>
+                    	</div>
+                    	<div class="text-right">
+                    	
+                        	<th><strong>Remaining Hours	:</strong></th>
+                        	<td>
+                            <span t-field="o.remaining_hours" />
+                        	</td>
+                       	</div>      
+            </t>
+		</div>
+	</t>
+	</template>
+
+	<template id="custom_task_details_report">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="doc">
+				<t t-call="bi_all_in_one_project_management_system.task_details" />
+			</t>
+		</t>
+	</template>
+</odoo>
+

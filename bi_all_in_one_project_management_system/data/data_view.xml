@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <record id="scheduler_task_update_daily" model="ir.cron">
+        <field name="name">Email Task Update daily</field>
+        <field name="model_id" ref="model_res_users"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="priority">5</field>
+        <field name="state">code</field>
+        <field name="code">model.task_update_email()</field>
+    </record>
+
+
+
+
+    <record id="scheduler_task_update_weekly" model="ir.cron">
+        <field name="name">Email Task Update weekly</field>
+        <field name="model_id" ref="model_res_users"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">weeks</field>
+        <field name="priority">5</field>
+        <field name="state">code</field>
+        <field name="code">model.weekly_task_update_email()</field>
+    </record>
+    <record model="ir.cron" id="cron_post_process_ship_status_tx">
+		<field name="name">Project Status Cron</field>
+		<field name="model_id" ref="project.model_project_task"/>
+		<field name="state">code</field>
+		<field name="code">model._cron_post_deadline()</field>
+		<field name="user_id" ref="base.user_root"/>
+		<field name="interval_number">1</field>
+		<field name="interval_type">days</field>
+		<!-- <field name="numbercall">-1</field> -->
+		<field name="active" eval="True"/>
+		<!-- <field name="doall" eval="False"/> -->
+	</record>
+
+    <record model="ir.cron" id="availability_create_cron">
+        <field name="name">Task First Reminder</field>
+        <field name="model_id" ref="model_project_task"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="state">code</field>
+        <field name="code">model._cron_task_reminder()</field>
+    </record>
+
+
+    <record model="ir.cron" id="availability_create_second_cron">
+        <field name="name">Task Second Reminder</field>
+        <field name="model_id" ref="model_project_task"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="state">code</field>
+        <field name="code">model._cron_task_second_reminder()</field>
+    </record>
+    <record id="scheduler_timesheet_notification" model="ir.cron">
+        <field name="name">Task Timesheet Limit Reminder Notification</field>
+        <field name="model_id" ref="model_project_task"/>
+        <field name="interval_number">1</field>
+        <field name="interval_type">minutes</field>
+        <field name="priority">5</field>
+        <field name="state">code</field>
+        <field name="code">model.task_timesheet_reminder()</field>
+    </record>
+    
+        <!-- Sequences for Project -->
+    <record id="seq_project_" model="ir.sequence">
+        <field name="name">Project</field>
+        <field name="code">project.project</field>
+        <field name="prefix">PRJ-</field>
+        <field name="padding">4</field>
+    </record>
+
+    <!-- Sequences for Project Task -->
+    <record id="seq_project_task" model="ir.sequence">
+        <field name="name">Project Task</field>
+        <field name="code">project.task</field>
+        <field name="prefix">Task-</field>
+        <field name="padding">4</field>
+    </record>
+
+    
+    </data>
+</odoo>

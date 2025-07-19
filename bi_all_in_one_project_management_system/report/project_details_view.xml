@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="project_details">
+	<t t-call="web.external_layout">
+		<div class="page">
+			<br/>
+			<t t-foreach="docs" t-as="o">
+            <center>
+                <h2><span t-field="o.name" /></h2>
+            </center>
+            <table class="table table-bordered">
+                <t t-foreach="o.user_id" t-as="user">
+                <tr>
+                    <th>Project Manager :</th>
+                    <td>
+                        <span t-field="user.name" />
+                    </td>
+                </tr>
+                </t>
+                <tr>
+                    <th>Customer :</th>
+                    <td>
+                        <span t-field="o.partner_id.name" />
+                    </td>
+                </tr>
+
+                
+            </table>
+
+            <h2 style="text-align : center;font-style:normal; background-color:grey" >
+                   Task
+            </h2><br/>
+                <table  style="border-collapse: collapse;width: 100%;border: 3px solid #000;" class="table table-condensed">
+                    <tr >
+                        <td><strong >Task Name</strong> </td>
+                        <td><strong >Allocated Hours</strong></td>
+                        <td><strong >Spent Hours</strong></td>
+                        <td><strong >Remaining Hours</strong></td>
+                        <td><strong >Deadline</strong></td>
+                        <td><strong >Assign To</strong></td>
+                        <td><strong >Assign date</strong></td>
+                        <td><strong >Stages</strong></td>
+                    </tr>
+
+                    <t t-foreach="o.task_ids" t-as="p">
+                            <tr>
+                                <td><span t-field="p.name" /></td>
+                                <td><span t-field="p.allocated_hours" /></td>
+                                <td><span t-field="p.effective_hours" /></td>
+                                <td><span t-field="p.remaining_hours" /></td>
+                                <td><span t-field="p.date_deadline" /></td>
+                                <td><t t-foreach="o.user_id" t-as="user"><span t-field="user.name" /></t></td>
+                                <td><span t-field="p.date_assign" /></td>
+                                <td><span t-field="p.stage_id" /></td>
+                            </tr>  
+                    </t>
+                </table>
+            </t>
+        </div>
+    </t>
+	</template>
+
+	<template id="custom_project_details_report">
+		<t t-call="web.html_container">
+			<t t-foreach="docs" t-as="doc">
+				<t t-call="bi_all_in_one_project_management_system.project_details" />
+			</t>
+		</t>
+	</template>
+</odoo>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_sale_advance_payment_inv" model="ir.ui.view">
+        <field name="name">Mass Update Project Stages</field>
+        <field name="model">mass.update.project.stage</field>
+        <field name="arch" type="xml">
+            <form string="Mass Update Project Stages">
+                <group>
+                    <field name="is_update"/>
+                    <field name="project_update_method" class="oe_inline" widget="radio"
+                        invisible="not is_update"/>
+                    <field name="project_ids" invisible="not is_update" widget="many2many_tags"/>
+                </group>
+                <footer>
+                    <button name="update_project_stage" string="Update" type="object"  class="btn-primary" />
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_view_sale_advance_payment_inv" model="ir.actions.act_window">
+        <field name="name">Mass Update Project Stages</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">mass.update.project.stage</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="project.model_project_task_type"/>
+        <field name="binding_view_types">list</field>
+    </record>
+</odoo>

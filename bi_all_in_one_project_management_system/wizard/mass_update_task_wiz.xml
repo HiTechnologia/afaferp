@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		
+		<record id="mass_update_task_wiz_form_view" model="ir.ui.view">
+			<field name="name">mass.update.task.wiz.form.view</field>
+			<field name="model">mass.update.task.wiz</field>
+			<field name="arch" type="xml">
+				<form string="Mass update Task">
+					<group>
+					   <group>
+						<field name="change_project"/>
+						<field name="project_id" invisible= "not change_project"/>
+					   </group>
+						
+						<group>
+						<field name="change_deadline"/>
+						<field name="new_date_deadline" invisible=" not change_deadline"/>
+						</group>
+						
+						<group>
+						<field name="change_stage"/>
+						<field name="new_stage" invisible=" not change_stage"/>
+						</group>
+						
+						<group>
+						<field name="change_tag"/>
+						<field name="update_tag_via" invisible=" not change_tag"  required= "change_tag"/>
+						<field name="tags" widget="many2many_tags"  invisible="not change_tag" required="change_tag"/>
+						</group>
+						
+						<group>
+						<field name="change_assignees"/>
+						<field name="update_assignees_via" invisible="not change_assignees" required="change_assignees"/>
+                        <field name="assignees_ids" widget="many2many_tags"  invisible="not change_assignees" required="change_assignees"/>
+						</group>
+						
+					</group>
+				    <footer>
+						<button name="update_values" string="Update" type="object" class="btn-primary"/>
+						<button string="Cancel" class="btn-default" special="cancel" />
+					</footer>
+				</form>
+			</field>
+		</record>  
+
+		<record id="action_mass_update_task" model="ir.actions.act_window">
+			<field name="name">Mass Update Task</field>
+			<field name="res_model">mass.update.task.wiz</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+			<field name="binding_model_id" ref="project.model_project_task"/>
+            <field name="binding_view_types">list</field>
+		</record>
+
+
+		
+	</data>
+</odoo>
+

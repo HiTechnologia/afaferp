@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit</field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="10"/>
+        <field name="inherit_id" ref="project.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//block[@name='project_time']" position="before">
+                <h2> Task Delay Start Notification &amp; Task Delay Completion Notification</h2>
+
+                <div class="row mt4  o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box" title="Advanced presence of employees">
+                        <div class="o_setting_left_pane">
+                            <field name="start_notification" />
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="start_notification" style="font-weight:bold;"/>
+                            <div class="row mt-1" invisible=" not start_notification">
+                                <label for="start_count"  class="ml16"/>
+                                <field name="start_count" class="col-lg-2 ml8"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="delay_notification"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="delay_notification" style="font-weight:bold;"/>
+                            <div class="row mt-1"  invisible="not delay_notification">
+                                <label for="delay_count" class="ml16"/>
+                                <field name="delay_count" class="col-lg-2 ml8"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </xpath>
+            <xpath expr="//block[@name='project_time']" position="inside">
+                <h2>Project Subtask And Delegation</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_left_pane"/>
+                        <div class="o_setting_right_pane">
+                            <span class="o_form_label">Project Stages</span>
+                            <div class="text-muted">
+                                Prevent stage to change untill all task on same stage
+                            </div>
+                            <div class="text-muted">
+                                <field name="warning_child_task"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Project Stage Checklist</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <div class="content-group">
+                                <div class="mt16 row">
+                                    <label for="todo_stage_ckecklist" string="To Do Stage" class="col-xs-3 col-md-3 o_light_label"/>
+                                    <field name="todo_stage_ckecklist" class="oe_inline"/>
+                                </div>
+                                <div class="mt16 row">
+                                    <label for="done_stage_ckecklist" string="Done Stage" class="col-xs-3 col-md-3 o_light_label"/>
+                                    <field name="done_stage_ckecklist" class="oe_inline"/>
+                                </div>
+                                <div class="mt16 row">
+                                    <label for="cancel_stage_ckecklist" string="Cancel Stage" class="col-xs-3 col-md-3 o_light_label"/>
+                                    <field name="cancel_stage_ckecklist" class="oe_inline"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//block[@name='project_time']" position="after">
+                <h2>Task Deadline Reminder</h2>
+                <div class="row mt16 o_settings_container">
+
+                    <div class="col-xs-12 col-md-6 o_setting_box" >
+                        <div class="o_setting_right_pane">
+                            <label for="first_reminder"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <field name="first_reminder"/>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="second_reminder"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <field name="second_reminder"/>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+            <xpath expr="//block[@name='project_time']" position="after">
+                <h2>Multi Task Timer configuration.</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="allow_multi_task"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="allow_multi_task"/>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_res_config_settings_inherited" model="ir.ui.view">
+        <field name="name">res.config.settings.form.inherited</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <group string="Task Configuration">
+                    <field name="start_notification"/>
+                    <field name="delay_notification"/>
+                    <field name="start_count"/>
+                    <field name="delay_count"/>
+                    <field name="done_stage_ckecklist"/>
+                    <field name="todo_stage_ckecklist"/>
+                    <field name="cancel_stage_ckecklist"/>
+                    <field name="warning_child_task"/>
+                    <field name="first_reminder"/>
+                    <field name="second_reminder"/>
+                    <field name="allow_multi_task"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>    
+
+
+
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+       
+        <record id="action_task_details" model="ir.actions.report">
+            <field name="name">Task Details</field>
+            <field name="model">project.task</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">bi_all_in_one_project_management_system.custom_task_details_report</field>
+            <field name="report_file">bi_all_in_one_project_management_system.custom_task_details_report</field>
+            <field name="binding_model_id" ref="project.model_project_task"/>
+            <field name="binding_type">report</field>
+        </record>
+
+        <record id="action_project_details" model="ir.actions.report">
+            <field name="name">Project Details</field>
+            <field name="model">project.project</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">bi_all_in_one_project_management_system.custom_project_details_report</field>
+            <field name="report_file">bi_all_in_one_project_management_system.custom_project_details_report</field>
+            <field name="binding_model_id" ref="project.model_project_project"/>
+            <field name="binding_type">report</field>
+        </record>
+</odoo>
+
