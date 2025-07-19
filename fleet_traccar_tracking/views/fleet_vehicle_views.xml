@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fleet_vehicle_view_form_traccar" model="ir.ui.view">
+        <field name="name">fleet.vehicle.form.view.inherit</field>
+        <field name="model">fleet.vehicle</field>
+        <field name="inherit_id" ref="fleet.fleet_vehicle_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('oe_title')]" position="after">
+                <group name="traccar" string="Traccar">
+                    <field name="is_traccar"/>
+                </group>
+            </xpath>
+            <xpath expr="//notebook[last()]" position="inside">
+                <page string="Traccar" name="page_traccar" invisible="is_traccar == False">
+                    <div invisible="traccar_device_id in ('', False) and is_traccar == False" class="w-100">
+                        <div class="oe_inline">
+                            <button 
+                                name="action_open_device_summary" 
+                                string=" View Device Summary" 
+                                type="object" 
+                                class="btn-primary w-25 border border-white" 
+                                icon="fa-list-alt"/>
+                            <button 
+                                name="action_fetch_trips" 
+                                string=" Fetch Trips" 
+                                type="object" 
+                                class="btn-primary w-25 border border-white" 
+                                icon="fa-car" 
+                                title="Vehicles"/>
+                            <button 
+                                name="action_fetch_routes" 
+                                string=" Fetch Routes" 
+                                type="object" 
+                                class="btn-primary w-25 border border-white" 
+                                icon="fa-car" 
+                                title="Vehicles"/>
+                            <button 
+                                name="action_open_device_location" 
+                                string=" View Current Location" 
+                                type="object" 
+                                class="btn-primary w-25 border border-white" 
+                                icon="fa-map-marker"/>
+                        </div>
+                    </div>
+                    <group col="2" string="Traccar">
+                        <group>
+                            <label for="traccar_device_uniqueid"/>
+                            <div class="o_row">
+                                <field name="traccar_device_uniqueid"/>
+                                <button 
+                                    name="sync_traccar_device" 
+                                    string="Sync" 
+                                    type="object" class="btn btn-primary" 
+                                    icon="fa-refresh" 
+                                    invisible="traccar_device_uniqueid in ('', False)"/>
+                            </div>
+                            
+                            <field name="traccar_device_id" readonly="1"/>
+                            <field name="traccar_device_status" readonly="1"
+                                invisible="traccar_device_id in ('', False)"/>
+                            <field name="traccar_device_lastupdate" readonly="1"
+                                invisible="traccar_device_id in ('', False) and traccar_device_lastupdate in ('', False)"/>                            
+                        </group>
+                    </group>                    
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="form_raise_message" model="ir.ui.view">
+			<field name="name">Raise Message</field>
+			<field name="model">raise.message</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Message">
+					<field name="message" widget="html" colspan="4" readonly="1" nolabel="1" />
+					<footer>
+						<button special="cancel" class="oe_highlight" string="Close" />
+					</footer>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

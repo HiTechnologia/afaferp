@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="traccar_config_settings_form" model="ir.ui.view">
+        <field name="name">traccar.config.settings.form</field>
+        <field name="model">traccar.config.settings</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Connection Instance">
+                <header>
+                </header>
+                <sheet>
+                    <field name="authentication_status" invisible="1"/>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="check_connection"
+                            type="object"
+                            class="oe_stat_button"
+                            icon="fa-link icon">
+                            <div class="o_field_widget o_stat_info">
+                                <span class="o_stat_text">Check</span>
+                                <span class="o_stat_text">Connection</span>
+                            </div>
+                        </button>
+                    </div>
+                    <widget name="web_ribbon" text="Authorized"
+                        invisible="authentication_status != True"/>
+                    
+                    <widget name="web_ribbon" text="Not Authorized" bg_color="bg-danger"
+                        invisible="authentication_status != False"/>
+                    
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <field name="active" widget="boolean_button" options='{"terminology": "active"}'/>
+                    </group>
+                    <div class="oe_horizontal_separator oe_clear ">
+                        <separator string="Traccar API Settings"/>
+                    </div>
+                    <group>
+                        <group>
+                            <label for="api_url"/>
+                            <b class="o_form_required">
+                                <field name="api_url" colspan="4" placeholder="API Url"/>
+                            </b>
+                      
+                            <label for="api_user"/>
+                            <b class="o_form_required">
+                                <field name="api_user" colspan="4" placeholder="API Username"/>
+                            </b>
+
+                            <label for="api_pwd"/>
+                            <b class="o_form_required">
+                                <field name="api_pwd" password="True" colspan="4" placeholder="API Username"/>
+                            </b>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+            </form>
+        </field>
+    </record>
+
+    <record id="traccar_config_settings_list" model="ir.ui.view">
+        <field name="name">traccar.config.settings.list</field>
+        <field name="model">traccar.config.settings</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="Ttraccar Config Settings">
+                <field name="name"/>
+                <field name="api_user"/>
+                <field name="active"/>
+                <field name="authentication_status"/>
+                <field name="create_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="traccar_config_settings_search" model="ir.ui.view">
+        <field name="name">traccar.config.settings.search</field>
+        <field name="model">traccar.config.settings</field>
+        <field name="arch" type="xml">
+            <search string="Ttraccar Config Settings">
+                <field name="authentication_status"/>
+                <filter string="Inactive" name="inactive" domain="[('active','=',False)]" help="Inactive"/>
+                <filter string="Authorized" name="authorized" domain="[('authentication_status','=',True)]" help="Authorized"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="traccar_instance_list_action" model="ir.actions.act_window">
+        <field name="name">Traccar Configuration</field>
+        <field name="res_model">traccar.config.settings</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="traccar_config_settings_list"/>
+        <field name="search_view_id" ref = "traccar_config_settings_search"/>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create oe_link">
+                Click to define a new Traccar connection.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="traccar_configuration_menu"
+        parent="fleet.fleet_configuration"
+        action="traccar_instance_list_action" 
+        groups="fleet.fleet_group_manager"
+        sequence="1"/>
+
+</odoo>

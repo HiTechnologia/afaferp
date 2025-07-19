@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    
+
+    <t t-name="TraccarMapView" class="o_map_container" owl="1">
+        <div class="o_traccar_map_view_container">
+            <div id="olmap_widget" class="olmap_widget" style="width: 100%; height: 100%" t-ref="mapContainer"></div>
+        </div>
+    </t>
+
+</templates>

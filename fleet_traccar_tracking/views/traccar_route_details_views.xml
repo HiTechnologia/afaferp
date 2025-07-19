@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="traccar_route_details_form" model="ir.ui.view">
+        <field name="name">traccar.route.details.form</field>
+        <field name="model">traccar.route.details</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Vehicle Trip Details" create="0" edit="0" js_class="traccar_map_form">
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="e.g. TRIP0001"/>
+                        </h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-3">
+                            <label for="vehicle_id"/>
+                            <h2>
+                                <field name="vehicle_id" class="oe_inline"/>
+                            </h2>
+                        </div>
+                        <div class="col-3">
+                            <label for="driver_id"/>
+                            <h2>
+                                <field name="driver_id" class="oe_inline"/>
+                            </h2>
+                        </div>
+                    </div>
+                                                                                        
+                    <div class="row" style="padding-left: 16px; padding-right: 16px;">
+                        <div class="col-6">
+                            <group string="Latitude &amp; Longitude">
+                                <group string="Source">                                    
+                                    <field name="src_latitude" string="Latitude" readonly="1"/>
+                                    <field name="src_longitude" string="Longitude" readonly="1"/>
+                                </group>
+                                <group string="Destination">                                    
+                                    <field name="dst_latitude" string="Latitude" readonly="1"/>
+                                    <field name="dst_longitude" string="Longitude" readonly="1"/>
+                                </group>                                
+                            </group>
+                            <group string="Traccar Details">
+                                <group string="Date">
+                                    <field name="device_time" string="Device Time"/>
+                                    <field name="route_date" string="Route Date"/>
+                                    <field name="device_time"/>
+                                </group>
+                                <group string="Traccar Trip">
+                                    <field name="route_id"/>
+                                    <field name="traccar_device_uniqueid"/>
+                                    <field name="device_id"/>
+                                </group>
+                                <group string="Device Status">                                    
+                                    <field name="battery_level"/>
+                                    <field name="distance"/>
+                                    <field name="total_distance"/>
+                                    <field name="motion"/>
+                                </group>                                
+                                <group string="Other Details">
+                                    <field name="altitude"/>
+                                    <field name="speed"/>
+                                    <field name="course"/>
+                                    <field name="accuracy"/>
+                                </group>
+                            </group>
+                        </div>
+
+                        <div class="col-6">
+                            <div class="o_horizontal_separator mt-4 mb-3 text-uppercase fw-bolder small">
+                                Route Map
+                            </div>
+                            <div class="o_traccar_map_view_container">
+                                <div id="o_traccar_map_view" class="o_traccar_map_view" show_route_trip='true'>
+                                    <div id="popup" class="ol-popup">
+                                        <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                                        <div id="popup-content"></div>
+                                    </div>
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="traccar_route_details_list" model="ir.ui.view">
+        <field name="name">traccar.route.details.list</field>
+        <field name="model">traccar.route.details</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="Vehicle Route Details" create="0" edit="0" >
+                <field name="name" />
+                <field name="vehicle_id" />
+                <field name="driver_id" />
+                <field name="speed"/>
+                <field name="route_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="traccar_route_details_action" model="ir.actions.act_window">
+        <field name="name">Route Details</field>
+        <field name="res_model">traccar.route.details</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem name="Route Details" action="traccar_route_details_action" parent="fleet_traccar_tracking.fleet_traccar_menu" id="traccar_route_details_menu" groups="fleet.fleet_group_user,fleet.fleet_group_manager"/>
+
+</odoo>

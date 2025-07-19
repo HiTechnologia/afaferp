@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='fleet_traccar_vehicle_action' model='ir.actions.act_window'>
+        <field name="name">Vehicles</field>
+        <field name="res_model">fleet.vehicle</field>
+        <field name="view_mode">kanban,list,form,pivot,activity</field>
+        <field name="domain">[('is_traccar', '=', True)]</field>
+        <field name="context">{'search_default_groupby_status': 1}</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Ready to manage your fleet more efficiently ?
+          </p><p>
+            Let's create your first vehicle.
+          </p>
+        </field>
+    </record>
+
+    <menuitem name="Traccar" parent="fleet.menu_root" id="fleet_traccar_menu" groups="fleet.fleet_group_user,fleet.fleet_group_manager"/>
+    <menuitem name="Traccar Vehicles" action="fleet_traccar_vehicle_action" parent="fleet_traccar_menu" id="fleet_traccar_vehicle_menu" groups="fleet.fleet_group_user,fleet.fleet_group_manager"/>
+
+</odoo>
