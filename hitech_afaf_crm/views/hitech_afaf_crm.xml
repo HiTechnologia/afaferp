@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_hitech_afaf_crm" model="ir.ui.view">
+        <field name="name">hitech.afaf.crm.form</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_id']" position="attributes">
+                <attribute name="string">Client</attribute>
+            </xpath>
+
+            <!-- Rename date_deadline -->
+            <xpath expr="//field[@name='date_deadline']" position="attributes">
+                <attribute name="string">Date Required</attribute>
+            </xpath>
+
+            <!-- Project Details Block -->
+            <xpath expr="//group[.//field[@name='phone']]" position="after">
+                <separator/>
+                <group col="2">
+                    <group>
+                        <field name="consultant" widget="many2many_tags"/>
+                        <field name="contractor" widget="many2many_tags"/>
+                        <field name="date_received" placeholder="Add Here"/>
+                        <field name="week_ref" placeholder="Add Here"/>
+                        <field name="week_ref_label" placeholder="Add Here"/>
+                        <field name="selected_by_mngt" placeholder="Add Here"/>
+                    </group>
+                    <group>
+                        <field name="project_id" placeholder="Add Here"/>
+                        <field name="project_code" readonly="1"/>
+                        <field name="project_detail" readonly="1"/>
+                        <field name="project_plot" readonly="1"/>
+                        <field name="ht_type"/>
+                        <field name="quoted"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
