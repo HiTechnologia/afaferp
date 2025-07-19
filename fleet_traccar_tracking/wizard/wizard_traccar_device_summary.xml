@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="form_wizard_traccar_device_summary" model="ir.ui.view">
+			<field name="name">Traccar Device Summary</field>
+			<field name="model">wizard.traccar.device.summary</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Traccar Device Summary">
+					<group string="Tracking Details">
+                        <group col="4">
+                            <field name="vehicle_id" readonly="1"/>
+                            <field name="device_id" readonly="1"/>                           
+                        </group>
+                        <group col="4">
+                            <field name="from_date"/>
+                            <field name="to_date"/>                           
+                        </group>
+                    </group>                    
+					<footer>
+                        <button name="open_device_summary" string="Open Summary" type="object" class="btn-primary" data-hotkey="q"/>
+                        <button special="cancel" data-hotkey="z" string="Cancel" type="object" class="btn-secondary"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="form_details_traccar_device_summary" model="ir.ui.view">
+			<field name="name">Traccar Device Summary Details</field>
+			<field name="model">details.traccar.device.summary</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Traccar Device Summary Details" edit="0">
+					<group string="Details">
+                        <group>
+                            <field name="device_id"/>
+							<field name="average_speed"/>
+                            <field name="max_speed"/>                            
+                        </group>
+						<group>
+                            <field name="distance"/>
+                            <field name="spent_fuel"/>
+							<field name="start_time"/>
+                            <field name="end_time"/>                             
+                        </group>
+						<group>
+                            <field name="start_odometer"/>
+                            <field name="end_odometer"/>
+							<field name="engine_hours"/>
+                        </group>
+                    </group>                    
+					<footer>                        
+                        <button special="cancel" data-hotkey="z" string="Cancel" type="object" class="btn-secondary"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>

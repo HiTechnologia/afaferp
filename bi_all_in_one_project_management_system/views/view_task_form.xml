@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+      <record id="act_project_project_2_project_task_all" model="ir.actions.act_window">
+          <field name="name">Meeting Tasks</field>
+          <field name="res_model">project.task</field>
+          <field name="view_mode">list,form,calendar,pivot,graph,activity</field>
+          <field name="domain">[('meeting_id', '=', active_id)]</field>
+          <field name="context">{'search_default_meeting_id': [active_id],'default_meeting_id': active_id,}</field>
+          <field name="search_view_id" ref="project.view_task_search_form"/>
+          <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                  Click <i>Create</i> to start a new task.
+              </p>
+          </field>
+      </record>
+      <record id="view_create_task_meeting" model="ir.ui.view">
+            <field name="name">create.task.meeting.name</field>
+            <field name="model">meeting.date</field>
+            <field name="arch" type="xml">
+                <form string="Meeting">
+                    <group>
+                        <field name="start_date"/>
+                    </group>
+                    <footer>
+                        <button name="get_data" string="Create Meeting" 
+                          type="object" class="oe_highlight"/>
+                        <button string="Cancel" class="btn-default" special="cancel" />
+                   </footer>
+                </form>
+            </field>
+        </record>
+        <record id="open_wizard_action_id" model="ir.actions.act_window">
+             <field name="name">Create Meeting</field>
+             <field name="type">ir.actions.act_window</field>
+             <field name="res_model">meeting.date</field>
+             <field name="view_mode">form</field>
+             <field name="target">new</field>
+        </record>
+
+        <!-- meeting action -->
+            <record id="action_calendar_event" model="ir.actions.act_window">
+                <field name="name">Meetings</field>
+                <field name="res_model">calendar.event</field>
+                <field name="view_mode">list,form</field>
+                <field name="view_id" ref="calendar.view_calendar_event_calendar"/>
+                <field name="search_view_id" ref="calendar.view_calendar_event_search"/>
+                <field name="domain">[('task_id', '=', active_id)]</field>
+                <field name="context">{'search_default_task_id': [active_id],'default_task_id': active_id,}</field>
+                <field name="help" type="html">
+                      <p class="o_view_nocontent_smiling_face">
+                        Schedule a new meeting
+                      </p>
+                </field>
+            </record>
+      <record id="view_calendar_event_form_inherit" model="ir.ui.view">
+            <field name="name">view.calendar.form.inherit</field>
+            <field name="model">calendar.event</field>
+            <field name="inherit_id" ref="calendar.view_calendar_event_form"/>
+            <field name="arch" type="xml">
+                    <button name="action_open_calendar_event" position="replace">
+                        <button class="oe_stat_button"
+                                icon="fa-tasks"
+                                type="action"
+                                name="%(act_project_project_2_project_task_all)d"
+                                invisible="task_count == 0">
+                          <span class="o_stat_text">Task</span>
+                          <field name="task_count" invisible="True"/>
+                        </button>
+                        <button string="Document"
+                                  class="oe_stat_button float-right"
+                                  icon="fa-bars"
+                                  type="object"
+                                  name="action_open_calendar_event"
+                                  invisible=" not res_id"/>
+                        </button>
+                <field name="location" position="after">
+                    <field name="task_id"/>
+                    <field name="project_id"/>
+                </field>
+            </field>
+        </record>
+
+    <record model="ir.ui.view" id="bi_view_task_form">
+        <field name="name">project.task.view.form</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <header>
+                <button name="%(open_wizard_action_id)d" type="action" string="Create Meeting" class="oe_highlight"/>
+                <button name="action_send_task" string="Send by Email" type="object" class="oe_highlight"/>
+           </header>
+           
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="meeting_count" invisible="1"/>
+            </xpath>
+                <button name="action_open_parent_task" position="after">
+                    <button class="oe_stat_button" icon="fa-calendar" name="%(action_calendar_event)d" type="action" >
+                            <span class="o_stat_text">Meeting</span>
+                            <field name="meeting_count"/>
+                    </button>
+                </button>
+                <field name="user_ids" position="after">
+                  <field name="meeting_id"/>
+                </field>
+        </field>
+    </record>
+
+
+
+
+</odoo>

@@ -1,0 +1,21 @@
+18.0.0.1 | 04/02/2025
+- [IMP] Task timer functionality to allow multiple users.
+- [FIX] Minutes and Hours not store on page refresh and duration not count proper.
+
+=> 18.0.0.2 :- Date 14 Feb 2025
+:- Removed the required in Project Stage Checklist.
+
+=> 18.0.0.3 :- Date 14 Feb 2025
+:- Add all the fields in the company and include the related fields in the settings to resolve the issue.
+
+=> 18.0.0.4 :- Date 19 Feb 2025
+:- Fix the issue When a task is created, it displays the missing record of the sale order
+
+=> 18.0.0.5 :- Date 26 Mar 2025
+:- Fix the issue When a task is created, its Raise the Access Error
+
+=> 18.0.0.6 :- Date 26 Mar 2025
+:- Fix the issue When a task is created, its Raise the Access Error in staging database
+
+=> 18.0.0.7 :- Date 27 Mar 2025
+:- Fix the issue create a subtask using button it displays the missing record error

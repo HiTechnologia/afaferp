@@ -1,0 +1,64 @@
+<?xml version="1.0" ?>
+<odoo>
+        <record id="email_template_task_update" model="mail.template">
+            <field name="name">Task update Reminder</field>
+            <field name="subject">Task update Reminder</field>
+            <field name="email_from">{{(user.email_formatted or '')}}</field>
+            <field name="model_id" ref="bi_all_in_one_project_management_system.model_res_users" />
+            <field name="auto_delete" eval="True" />
+            <field name="body_html"><![CDATA[
+                   <div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
+                        <p>Hello</p>
+                        <p> This email is to remind about your assigned task</p>
+                    </div>
+                    <div>
+                       <table class="table table-condensed">
+                             <thead>
+                                <tr>
+                                    <th style="background-color:#9b9da0 !important;">Name</th>
+                                    <th style="background-color:#9b9da0 !important;">Deadline</th>
+                                    <th style="background-color:#9b9da0 !important;">Stage</th>
+                                    <th style="background-color:#9b9da0 !important;">Overdue Time</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                <t t-foreach="object.assign_update_ids" t-as="task">
+                                    <tr>
+                                        <td><span><t t-out="task.name"></span></td>
+                                        <td><span><t t-out="task.date_deadline"></span></td>
+                                        <td><span><t t-out="task.stage_id.name"></span></td>
+                                        <td><span><t t-out="task.dueday"></span></td>
+                                    </tr>
+                                 </t>
+                             </tbody>
+                       </table>
+                    </div>
+                    <div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
+                        <p> This email is to remind about your created task</p>
+                    </div>
+                    <div>
+                       <table class="table table-condensed">
+                             <thead>
+                                <tr>
+                                    <th style="background-color:#9b9da0 !important;">Name</th>
+                                    <th style="background-color:#9b9da0 !important;">Deadline</th>
+                                    <th style="background-color:#9b9da0 !important;">Stage</th>
+                                    <th style="background-color:#9b9da0 !important;">Overdue Time</th>
+                                </tr>
+                             </thead>
+                             <tbody>
+                                <t t-foreach="object.created_task_ids" t-as="task">
+                                    <tr>
+                                        <td><span><t t-out="task.name"></span></td>
+                                        <td><span><t t-out="task.date_deadline"></span></td>
+                                        <td><span><t t-out="task.stage_id.name"></span></td>
+                                        <td><span><t t-out="task.dueday"></span></td>
+                                    </tr>
+                                </t>
+                             </tbody>
+                       </table>
+                    </div>
+                        ]]>
+            </field>
+        </record>
+</odoo>

@@ -1,0 +1,11 @@
+.o_traccar_map_view_container{
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    position: relative;
+}
+.o_traccar_map_view {
+    width: 100%;
+    min-height: 500px;
+    height: 500px;
+}

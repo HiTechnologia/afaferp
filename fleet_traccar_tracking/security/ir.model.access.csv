@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_traccar_config_settings_manager,access.traccar.config.settings.manager,model_traccar_config_settings,fleet.fleet_group_manager,1,1,1,1
+access_traccar_trip_details_user,access.traccar.trip.details.user,model_traccar_trip_details,base.group_user,1,1,1,1
+access_traccar_route_details_user,access.traccar.route.details.user,model_traccar_route_details,base.group_user,1,1,1,1
+access_traccar_event_details_user,access.traccar.event.details.user,model_traccar_event_details,base.group_user,1,1,1,1
+access_raise_message_user,access.raise.message.user,model_raise_message,base.group_user,1,1,1,1
+access_wizard_traccar_device_summary_user,access.wizard.traccar.device.summary.user,model_wizard_traccar_device_summary,base.group_user,1,1,1,1
+access_details_traccar_device_summary_user,access.details.traccar.device.summary.user,model_details_traccar_device_summary,base.group_user,1,1,1,1
+access_wizard_traccar_fetch_trips_user,access.wizard.traccar.fetch.trips.user,model_wizard_traccar_fetch_trips,base.group_user,1,1,1,1
+access_wizard_traccar_fetch_routes_user,access.wizard.traccar.fetch.routes.user,model_wizard_traccar_fetch_routes,base.group_user,1,1,1,1
+access_wizard_traccar_device_location_user,access.wizard.traccar.device.location.user,model_wizard_traccar_device_location,base.group_user,1,1,1,1
+access_wizard_traccar_current_position_user,access.wizard.traccar.current.position.user,model_wizard_traccar_current_position,base.group_user,1,1,1,1

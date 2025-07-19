@@ -1,0 +1,18 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sub_project,sub.project,bi_all_in_one_project_management_system.model_sub_project,,1,1,1,1
+access_task_update,access_task_update,bi_all_in_one_project_management_system.model_task_update,,1,1,1,1
+access_mass_update_task_wiz,mass.update.task.wiz,bi_all_in_one_project_management_system.model_mass_update_task_wiz,,1,1,1,1
+access_project_task,subtask.wizard,model_subtask_wizard,project.group_project_user,1,1,1,1
+access_task_on_partner,subtask.wizard on partners,model_subtask_wizard,base.group_user,1,0,0,0
+access_subtask_wizard,subtask.wizard,model_subtask_wizard,,1,1,1,1
+access_meeting_date,access.meeting.date,model_meeting_date,base.group_user,1,1,1,1
+access_auto_assign,access_auto_assign_task,model_task_auto_assign,,1,1,1,1
+access_sale_task_create,access_sale_task_create,model_sale_task_create,,1,1,1,1
+import_task,import_task,model_import_task,,1,1,1,1
+access_project_task_timer_wizard,access_project_task_timer_wizard,model_project_task_timer_wizard,,1,1,1,1
+access_project_checklist,access_project_checklist,model_project_checklist,base.group_user,1,1,1,1,
+access_project_checklist_template,access_project_checklist_template,model_project_checklist_template,base.group_user,1,1,1,1,
+access_project_checklist_line,access_project_checklist_line,model_project_checklist_line,base.group_user,1,1,1,1
+access_mass_update_project_stage,mass.update.project.stage,bi_all_in_one_project_management_system.model_mass_update_project_stage,,1,1,1,1
+access_project_task_user_time_user,access_project_task_user_time_user,model_project_task_user_time,base.group_user,1,1,1,1
+access_project_task_user_time_manager,access_project_task_user_time_manager,model_project_task_user_time,project.group_project_manager,1,1,1,1

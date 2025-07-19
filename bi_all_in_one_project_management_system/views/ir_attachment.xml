@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+		<record id="view_document_file_kanban_project_and_task" model="ir.ui.view">
+			<field name="name">ir.attachment.kanban.project.and.task</field>
+			<field name="model">ir.attachment</field>
+			<field name="inherit_id" ref="mail.view_document_file_kanban"/>
+			<field name="arch" type="xml">
+				<xpath expr="//kanban" position="attributes">
+					<attribute name="create">False</attribute>
+				</xpath>
+			</field>
+		</record>
+		
+		<record id="view_attachment_tree_all_in_one" model="ir.ui.view">
+			<field name="name">ir.attachment.tree.all.in.one</field>
+			<field name="model">ir.attachment</field>
+			<field name="inherit_id" ref="base.view_attachment_tree"/>
+			<field name="arch" type="xml">
+				<xpath expr="//list" position="attributes">
+					<attribute name="create">False</attribute>
+				</xpath>
+			</field>
+		</record>
+
+        <record id="action_project_doc" model="ir.actions.act_window">
+            <field name="res_model">ir.attachment</field>
+            <field name="name">Project Documents</field>
+            <field name="view_mode">list,form,kanban</field>
+            <field name="domain">[('res_model', '=', 'project.project')]</field>
+        </record>
+        
+        
+        <record id="action_task_doc" model="ir.actions.act_window">
+            <field name="res_model">ir.attachment</field>
+            <field name="name">Task Documents</field>
+            <field name="view_mode">list,form,kanban</field>
+            <field name="domain">[('res_model', '=', 'project.task')]</field>
+        </record>
+        
+
+        <menuitem name="Documents"
+                   id="menu_main_documents"
+                   parent="project.menu_main_pm"
+                   sequence="1"
+                   groups="project.group_project_manager"/>
+    
+        <menuitem name="Project Documents"
+                   id="menu_project_documents"
+                   parent="bi_all_in_one_project_management_system.menu_main_documents"
+                   action="action_project_doc"/>
+                   
+        <menuitem name="Task Documents"
+                   id="menu_task_documents"
+                   parent="bi_all_in_one_project_management_system.menu_main_documents"
+                   action="action_task_doc"/>
+
+
+</odoo>

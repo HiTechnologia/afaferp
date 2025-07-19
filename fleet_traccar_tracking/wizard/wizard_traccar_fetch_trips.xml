@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="form_wizard_traccar_fetch_trips" model="ir.ui.view">
+			<field name="name">Traccar Fetch Trips</field>
+			<field name="model">wizard.traccar.fetch.trips</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Traccar Device Summary">
+					<group string="Tracking Details">
+                        <group col="4">
+                            <field name="vehicle_id" readonly="1"/>
+                            <field name="device_id" readonly="1"/>                           
+                        </group>
+                        <group col="4">
+                            <field name="from_date"/>
+                            <field name="to_date"/>                           
+                        </group>
+                    </group>                    
+					<footer>
+                        <button name="action_fetch_trips" string="Fetch Trips" type="object" class="btn-primary" data-hotkey="q"/>
+                        <button special="cancel" data-hotkey="z" string="Cancel" type="object" class="btn-secondary"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+    </data>
+</odoo>
