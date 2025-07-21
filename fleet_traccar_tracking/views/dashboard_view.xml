@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Idle Rate Bar Chart -->
+    <record id="view_fleet_idle_rate_list" model="ir.ui.view">
+        <field name="name">fleet.idle.rate.report.list</field>
+        <field name="model">fleet.idle.rate.report</field>
+        <field name="arch" type="xml">
+            <list string="Your Daily Idle Rates" type="bar">
+                <field name="day" type="row"/>
+                <field name="idle_rate"/>
+                <field name="average_whole_period" type="measure" invisible="context.get('graph_mode') != 'line'" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_fleet_idle_rate_graph" model="ir.ui.view">
+        <field name="name">fleet.idle.rate.report.graph</field>
+        <field name="model">fleet.idle.rate.report</field>
+        <field name="arch" type="xml">
+            <graph string="Your Daily Idle Rates" type="bar">
+                <field name="day" type="row"/>
+                <field name="idle_rate"/>
+                <field name="average_whole_period" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Vehicle Activity Stacked Bar Chart -->
+    <record id="view_fleet_activity_list" model="ir.ui.view">
+        <field name="name">fleet.activity.report.list</field>
+        <field name="model">fleet.activity.report</field>
+        <field name="arch" type="xml">
+            <list string="Daily Vehicle Activity">
+                <field name="day" type="row"/>
+                <field name="inactive_whole"/>
+                <field name="inactive_whole_pct"/>
+                <field name="inactive_on_day"/>
+                <field name="inactive_on_day_pct"/>
+                <field name="active"/>
+                <field name="active_pct"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_fleet_activity_graph" model="ir.ui.view">
+        <field name="name">fleet.activity.report.graph</field>
+        <field name="model">fleet.activity.report</field>
+        <field name="arch" type="xml">
+            <graph string="Daily Vehicle Activity" type="bar" stacked="True">
+                <field name="day" type="row"/>
+                <field name="inactive_whole" type="measure"/>
+                <field name="inactive_on_day" type="measure"/>
+                <field name="active" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Distance Covered Chart View -->
+    <record id="view_fleet_distance_report_list" model="ir.ui.view">
+        <field name="name">fleet.distance.report.list</field>
+        <field name="model">fleet.distance.report</field>
+        <field name="arch" type="xml">
+            <list string="Distance Covered Report" type="pie">
+                <field name="day" type="row"/>
+                <field name="distance_covered"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_fleet_distance_report_graph" model="ir.ui.view">
+        <field name="name">fleet.distance.report.graph</field>
+        <field name="model">fleet.distance.report</field>
+        <field name="arch" type="xml">
+            <graph string="Distance Covered Report" type="bar">
+                <field name="day" type="row"/>
+                <field name="distance_covered" type='measure'/>
+            </graph>
+        </field>
+    </record>
+
+    <!-- Daily Summary -->
+    <record id="view_fleet_daily_summary_list" model="ir.ui.view">
+        <field name="name">fleet.daily.summary.report.list</field>
+        <field name="model">fleet.daily.summary.report</field>
+        <field name="arch" type="xml">
+            <list string="Fleet Daily Summary Report">
+                <field name="day"/>
+                <field name="distance_travelled"/>
+                <field name="total_harsh_events"/>
+                <field name="average_harsh_events"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_fleet_daily_summary_graph" model="ir.ui.view">
+        <field name="name">fleet.daily.summary.report.graph</field>
+        <field name="model">fleet.daily.summary.report</field>
+        <field name="arch" type="xml">
+            <graph string="Daily Distance And Harsh Events" type="bar">
+                <field name="day"/>
+                <field name="distance_travelled" type="measure"/>
+                <field name="total_harsh_events" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+
+     <!-- Idle Rate -->
+    <record id="action_idle_rate_report" model="ir.actions.act_window">
+        <field name="name">Idle Rate Report</field>
+        <field name="res_model">fleet.idle.rate.report</field>
+        <field name="view_mode">graph,list</field>
+    </record>
+
+    <menuitem id="menu_idle_rate_report" name="Idle Rates" parent="fleet.menu_fleet_reporting" action="action_idle_rate_report" sequence='10'/>
+
+    <!-- Vehicle Activity -->
+    <record id="action_activity_report" model="ir.actions.act_window">
+        <field name="name">Vehicle Activity Report</field>
+        <field name="res_model">fleet.activity.report</field>
+        <field name="view_mode">graph,list</field>
+    </record>
+
+    <menuitem id="menu_activity_report" name="Vehicle Activity" parent="fleet.menu_fleet_reporting" action="action_activity_report" sequence='20'/>
+
+    <!-- Distance Covered -->
+    <record id="action_fleet_distance_report" model="ir.actions.act_window">
+        <field name="name">Distance Covered Chart</field>
+        <field name="res_model">fleet.distance.report</field>
+        <field name="view_mode">graph,list</field>
+    </record>
+
+    <menuitem id="menu_distance_chart" name="Distance Covered Chart" action="action_fleet_distance_report" parent="fleet.menu_fleet_reporting" sequence='30'/>
+
+    <!-- Daily Summary -->
+    <record id="action_fleet_daily_summary_report" model="ir.actions.act_window">
+        <field name="name">Fleet Daily Summary</field>
+        <field name="res_model">fleet.daily.summary.report</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+    <menuitem id="menu_fleet_daily_summary" name="Daily Summary" parent="fleet.menu_fleet_reporting"
+    action="action_fleet_daily_summary_report" sequence='40'/>
+
+    <!-- Daily Trips Report Graph View -->
+    <record id="view_fleet_daily_trips_report_graph" model="ir.ui.view">
+        <field name="name">fleet.daily.trips.report.graph</field>
+        <field name="model">fleet.daily.trips.report</field>
+        <field name="arch" type="xml">
+            <graph string="Trips Completed Per Day" type="bar">
+                <field name="day" type="row"/>
+                <field name="trips_completed" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="view_fleet_daily_trips_report_list" model="ir.ui.view">
+        <field name="name">fleet.daily.trips.report.list</field>
+        <field name="model">fleet.daily.trips.report</field>
+        <field name="arch" type="xml">
+            <list string="Trips Completed Per Day">
+                <field name="day" type="row"/>
+                <field name="trips_completed" type="measure"/>
+                <field name="average_trips_completed"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_fleet_daily_trips_report" model="ir.actions.act_window">
+        <field name="name">Daily Trips Completed</field>
+        <field name="res_model">fleet.daily.trips.report</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+    <menuitem id="menu_fleet_daily_trips_report_root" name="Trips Completed Report" parent="fleet.menu_fleet_reporting"
+    sequence="50" action="action_fleet_daily_trips_report"/>
+
+    <!-- Vehicles Operating Times by hours  -->
+    <record id="view_fleet_hourly_activity_list" model="ir.ui.view">
+        <field name="name">fleet.hourly.activity.list</field>
+        <field name="model">fleet.hourly.activity</field>
+        <field name="arch" type="xml">
+            <list string="Vehicle Operating Time by Hour" type="bar">
+                <field name="hour" type="category"/>
+                <field name="total_duration" type="measure"/>
+                <field name="formatted_duration"/>
+                <field name="risk_level" type="row"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_fleet_hourly_activity_graph" model="ir.ui.view">
+        <field name="name">fleet.hourly.activity.graph</field>
+        <field name="model">fleet.hourly.activity</field>
+        <field name="arch" type="xml">
+            <graph string="Vehicle Operating Time by Hour" type="bar">
+                <field name="hour" type="category"/>
+                <field name="total_duration" type="measure"/>
+                <field name="risk_level" type="row"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_fleet_hourly_activity" model="ir.actions.act_window">
+        <field name="name">Vehicle Operating Time by Hour</field>
+        <field name="res_model">fleet.hourly.activity</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+    <menuitem id="menu_fleet_hourly_activity" name="Vehicle Operating Time by Hour" parent="fleet.menu_fleet_reporting"
+    action="action_fleet_hourly_activity" sequence="60"/>
+
+    <!-- Your Vehicles' Trip Starting Times by Hour (over 50km)  -->
+    <record id="view_fleet_trip_start_hour_report_list" model="ir.ui.view">
+        <field name="name">fleet.trip.start.hour.report.list</field>
+        <field name="model">fleet.trip.start.hour.report</field>
+        <field name="arch" type="xml">
+            <list string="Trip Start Times by Hour (Over 50km)" type="bar">
+                <field name="hour" type="category"/>
+                <field name="trip_count" type="measure"/>
+                <field name="risk_level" type="row"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_fleet_trip_start_hour_report_graph" model="ir.ui.view">
+        <field name="name">fleet.trip.start.hour.report.graph</field>
+        <field name="model">fleet.trip.start.hour.report</field>
+        <field name="arch" type="xml">
+            <graph string="Trip Start Times by Hour (Over 50km)" type="bar">
+                <field name="hour" type="category"/>
+                <field name="trip_count" type="measure"/>
+                <field name="risk_level" type="row"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_fleet_trip_start_hour_report" model="ir.actions.act_window">
+        <field name="name">Trip Starts by Hour (50+ km)</field>
+        <field name="res_model">fleet.trip.start.hour.report</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+    <menuitem id="menu_fleet_trip_start_hour_report" name="Trip Start Times by Hour (50+ km)" parent="fleet.menu_fleet_reporting" action="action_fleet_trip_start_hour_report" sequence="70"/>
+
+
+    <!-- Vehicle Utilization by Trips Completed -->
+    <record id="view_utilization_list" model="ir.ui.view">
+        <field name="name">fleet.utilization.report.list</field>
+        <field name="model">fleet.utilization.report</field>
+        <field name="arch" type="xml">
+            <list string="Vehicle Trips">
+                <field name="vehicle_id"/>
+                <field name="vehicle_name"/>
+                <field name="trips_completed"/>
+                <field name="average_all"/>
+                <field name="status"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_utilization_graph" model="ir.ui.view">
+        <field name="name">fleet.utilization.report.graph</field>
+        <field name="model">fleet.utilization.report</field>
+        <field name="arch" type="xml">
+            <graph string="Trips by Vehicle" type="bar">
+                <field name="vehicle_name" type="row"/>
+                <field name="trips_completed" type="measure"/>
+            </graph>
+        </field>
+    </record>
+
+    <record id="action_utilization_report" model="ir.actions.act_window">
+        <field name="name">Vehicle Utilization</field>
+        <field name="res_model">fleet.utilization.report</field>
+        <field name="view_mode">graph</field>
+    </record>
+
+    <menuitem id="menu_utilization_report" name="Vehicle Utilization Report" parent="fleet.menu_fleet_reporting" action='action_utilization_report' sequence="80"/>
+
+</odoo>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Form View -->
+    <record id="view_employee_movement_report_wizard_form" model="ir.ui.view">
+        <field name="name">employee.movement.report.wizard.form</field>
+        <field name="model">employee.movement.report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Employee Movement Report Wizard">
+                <group>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="include_no_geofence"/>
+                </group>
+                <footer>
+                    <button name="generate_report" string="Generate Excel" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+
+                <group>
+                    <field name="filename" readonly="1"/>
+                    <field name="report_file" filename="filename"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_employee_movement_report_wizard" model="ir.actions.act_window">
+        <field name="name">Employee Movement Report</field>
+        <field name="res_model">employee.movement.report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_employee_movement_report_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <!-- Menu Item -->
+    <menuitem id="menu_employee_movement_report"
+              name="Employee Movement Report"
+              parent="fleet.menu_root"
+              action="action_employee_movement_report_wizard"
+              sequence='99'/>
+
+</odoo>

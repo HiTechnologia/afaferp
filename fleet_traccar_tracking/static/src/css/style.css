@@ -9,3 +9,9 @@
     min-height: 500px;
     height: 500px;
 }
+
+.my_custom_font {
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+}
