@@ -26,11 +26,9 @@ class CrmLead(models.Model):
         'lead_id', 'partner_id',
         string="Contractors"
     )
-    consultant = fields.Many2many(
+    consultant = fields.Many2one(
         'res.partner',
-        'crm_lead_consultant_rel',
-        'lead_id', 'partner_id',
-        string="Consultants"
+        string="Consultant"
     )
 
     ht_type = fields.Selection([
