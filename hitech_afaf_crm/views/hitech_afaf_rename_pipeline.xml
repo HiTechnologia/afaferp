@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <!-- Rename Menu -->
+        <record id="crm.menu_crm_opportunities" model="ir.ui.menu">
+            <field name="name">My Inquiries</field>
+        </record>
+
+        <!-- Rename CRM Pipeline Report menu to 'Inquiry Analysis' -->
+        <record id="crm.crm_opportunity_report_menu" model="ir.ui.menu">
+            <field name="name">Inquiry Analysis</field>
+        </record>
+
+        <!-- Rename CRM Leads menu to 'All Inquiries' -->
+        <record id="crm.crm_menu_leads" model="ir.ui.menu">
+            <field name="name">All Inquiries</field>
+        </record>
+
+        <!-- Rename Action -->
+        <record id="crm.crm_lead_action_pipeline" model="ir.actions.act_window">
+            <field name="name">Inquiries</field>
+        </record>
+
+        <!-- Rename Action title shown on Inquiry Analysis view -->
+        <record id="crm.crm_opportunity_report_action" model="ir.actions.act_window">
+            <field name="name">Inquiry Analysis</field>
+        </record>
+
+
+        <record id="crm.crm_lead_action_pipeline" model="ir.actions.act_window">
+            <field name="name">Inquiries</field>
+            <field name="help">Use this menu to have an overview of your Inquiries.</field>
+        </record>
+
+        <!-- Override Configuration Menu -->
+        <record id="crm.menu_crm_config_lead" model="ir.ui.menu">
+            <field name="name">Inquiries</field>
+        </record>
+
+        <!-- Rename Field Label in Tree -->
+        <record id="crm_lead_tree_inquiries_label" model="ir.ui.view">
+            <field name="name">crm.lead.tree.inherit.inquiries</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_case_tree_view_leads"/>
+            <field name="arch" type="xml">
+                <xpath expr="//list" position="inside">
+                    <field name="stage_id" string="Inquiry Stage"/>
+                </xpath>
+            </field>
+        </record>
+        <!--        renaming the pipeline in search to inquiries-->
+        <record id="crm_lead_search_inherit_inquiries" model="ir.ui.view">
+            <field name="name">crm.lead.search.inherit.inquiries</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.view_crm_case_opportunities_filter"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='assigned_to_me']" position="attributes">
+                    <attribute name="string">My Inquiries</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--renaming pipeline to my inquiries in the search of report menu-->
+        <record id="crm_case_report_view_search_inherit_inquiries" model="ir.ui.view">
+            <field name="name">crm.case.report.search.inherit.inquiries</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_opportunity_report_view_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="//filter[@name='my']" position="attributes">
+                    <attribute name="string">My Inquiries</attribute>
+                </xpath>
+            </field>
+        </record>
+
+        <!--        xpath for the buttons -->
+        <record id="crm_lead_form_hide_buttons" model="ir.ui.view">
+            <field name="name">crm.lead.form.inquiry.button.override</field>
+            <field name="model">crm.lead</field>
+            <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+            <field name="arch" type="xml">
+
+                <!-- Hide "New Quotation" button for everyone except CRM Inquiries Manager -->
+                <xpath expr="//button[@name='action_sale_quotations_new']" position="attributes">
+                    <attribute name="groups">hitech_afaf_crm.group_crm_inquiries_manager</attribute>
+                </xpath>
+
+                <!-- Hide "Lost" button for everyone except CRM Inquiries Manager -->
+                <xpath expr="//header/button[@name='320'][1]" position="attributes">
+                    <attribute name="groups">hitech_afaf_crm.group_crm_inquiries_manager</attribute>
+                </xpath>
+                <xpath expr="//header/button[@name='320'][2]" position="attributes">
+                    <attribute name="groups">hitech_afaf_crm.group_crm_inquiries_manager</attribute>
+                </xpath>
+
+            </field>
+        </record>
+    </data>
+</odoo>
