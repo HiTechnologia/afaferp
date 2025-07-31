@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id,perm_read,perm_write,perm_create,perm_unlink
-access_crm_lead_inherit,hitech.crm.lead,model_crm_lead,,1,1,1,1
-access_crm_contractor_line_user,access.crm.contractor.line.user,model_crm_contractor_line,,1,1,1,1
